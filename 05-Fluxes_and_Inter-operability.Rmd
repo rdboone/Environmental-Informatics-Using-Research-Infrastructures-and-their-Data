@@ -35,9 +35,7 @@ At the end of this activity, you will be able to:
 
 #### NEON Flux Data and Inter-operability, Part 1
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iKYYhEUq3-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iKYYhEUq3-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > 1 hour
 
@@ -46,9 +44,7 @@ NEON-Battelle introduces NEON flux data.
 
 #### NEON Flux Data and Inter-operability, Part 2
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/krr1m5Rd_wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krr1m5Rd_wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > 1 hour
 
