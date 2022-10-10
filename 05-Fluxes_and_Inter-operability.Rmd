@@ -8,10 +8,6 @@ editor_options:
 
 > Estimated Time: 3 hours
 
-<div id="ds-challenge" markdown="1">
-
-<div id="ds-challenge" markdown="1">
-
 **Course participants**: As you review this information, please consider
 the final course project that you will work on at the over this
 semester. At the end of this section, you will document an initial
