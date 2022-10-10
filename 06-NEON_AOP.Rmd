@@ -3,9 +3,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f5e-X9dMnXs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Hyperspectral Remote Sensing
-
-### Learning Objectives
+## Learning Objectives
 After completing this tutorial, you will be able to:
 
 * Define hyperspectral remote sensing. 
@@ -14,12 +12,11 @@ After completing this tutorial, you will be able to:
   hyperspectral remote sensing data in tools like R or Python.
 * Describe what a "band" is.
 
-</div>
+##About Hyperspectral remote sensing
 
-#### Mapping the Invisible
+### Mapping the Invisible
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/3iaFzafWJQE?rel=0" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3iaFzafWJQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### About Hyperspectral Remote Sensing Data
 
