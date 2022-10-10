@@ -2286,7 +2286,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-10-01 UTC" "2022-10-11 UTC"
+## [1] "2022-10-02 UTC" "2022-10-11 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2593,7 +2593,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=7ab5d203-a6c8-435d-b837-45189c85904bOUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=e28ed681-c333-45a1-948c-d9c47ab5ed25OUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

@@ -2389,7 +2389,7 @@ Figure 8.1: A map of NWIS site locations in the Everglades
 <div class="sourceCode" id="cb830"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb830-1"><a href="usgs-national-water-information-system-nwis.html#cb830-1" aria-hidden="true" tabindex="-1"></a><span class="co"># need to set the variable(s) in order to query the times</span></span>
 <span id="cb830-2"><a href="usgs-national-water-information-system-nwis.html#cb830-2" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span>(DelBay_fabric) <span class="ot">&lt;-</span> <span class="st">&quot;temp&quot;</span></span>
 <span id="cb830-3"><a href="usgs-national-water-information-system-nwis.html#cb830-3" aria-hidden="true" tabindex="-1"></a><span class="fu">query</span>(DelBay_fabric, <span class="st">&quot;times&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2022-10-01 UTC&quot; &quot;2022-10-11 UTC&quot;</code></pre>
+<pre><code>## [1] &quot;2022-10-02 UTC&quot; &quot;2022-10-11 UTC&quot;</code></pre>
 <p>The first example we’ve included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.</p>
 <p>Here is a second example of using a non-GDP dataset which is not aggregated in times or variables. This data was found under the <a href="https://thredds.ucar.edu/thredds">data section on Unidata’s THREDDS server</a>. This example includes water vapor at 8km resolution at national extent from <a href="https://thredds.ucar.edu/thredds/catalog/satellite/WV/catalog.html">here</a>.</p>
 <div class="sourceCode" id="cb832"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb832-1"><a href="usgs-national-water-information-system-nwis.html#cb832-1" aria-hidden="true" tabindex="-1"></a>wv_fabric <span class="ot">&lt;-</span> <span class="fu">webdata</span>(<span class="at">url=</span><span class="st">&quot;https://thredds.ucar.edu/thredds/dodsC/satellite/WV/SUPER-NATIONAL_8km/current/SUPER-NATIONAL_8km_WV_20200904_1330.gini&quot;</span>)</span>
@@ -2555,7 +2555,7 @@ Figure 8.1: A map of NWIS site locations in the Everglades
 ## [1] &quot;Process successful&quot;
 ## 
 ## $URL
-## [1] &quot;https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=7ab5d203-a6c8-435d-b837-45189c85904bOUTPUT&quot;
+## [1] &quot;https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=e28ed681-c333-45a1-948c-d9c47ab5ed25OUTPUT&quot;
 ## 
 ## $statusType
 ## [1] &quot;ProcessSucceeded&quot;

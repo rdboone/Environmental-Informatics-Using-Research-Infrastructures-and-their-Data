@@ -35,9 +35,7 @@ At the end of this activity, you will be able to:
 
 #### NEON Flux Data and Inter-operability, Part 1
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iKYYhEUq3-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iKYYhEUq3-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > 1 hour
 
@@ -46,9 +44,7 @@ NEON-Battelle introduces NEON flux data.
 
 #### NEON Flux Data and Inter-operability, Part 2
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/krr1m5Rd_wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krr1m5Rd_wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > 1 hour
 
@@ -1646,7 +1642,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.343894 secs
+## Stacking took 0.339669 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found
