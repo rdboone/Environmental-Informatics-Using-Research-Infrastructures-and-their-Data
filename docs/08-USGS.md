@@ -203,7 +203,7 @@ nrow(data_sc)
 ```
 
 ```
-## [1] 203528
+## [1] 203526
 ```
 
 Let's look at the dataframe returned from `whatNWISdata`:
@@ -237,10 +237,10 @@ head(data_sc)
 ## 6 03040206           dv   00060   00001 124348       <NA>           wat
 ##   parm_grp_cd  srs_id access_cd begin_date   end_date count_nu
 ## 1        <NA>       0         0 2006-01-01 2021-01-01       16
-## 2        <NA> 1645597         0 2005-10-01 2022-09-28     6099
-## 3        <NA> 1645597         0 2005-10-01 2022-09-28     6099
-## 4        <NA> 1645597         0 2005-10-01 2022-09-28     6099
-## 5        <NA> 1644459         0 2006-01-06 2022-09-27     5876
+## 2        <NA> 1645597         0 2005-10-01 2022-10-09     6110
+## 3        <NA> 1645597         0 2005-10-01 2022-10-09     6110
+## 4        <NA> 1645597         0 2005-10-01 2022-10-09     6110
+## 5        <NA> 1644459         0 2006-01-06 2022-10-08     5886
 ## 6        <NA> 1645423         0 2005-11-17 2019-08-17     4394
 ```
 
@@ -253,7 +253,7 @@ length(sites_sc)
 ```
 
 ```
-## [1] 10164
+## [1] 10168
 ```
 
 To be more specific, let's say we only want stream sites. This requires the `siteType` argument and the abbreviation "ST" for stream. See other siteTypes [here](https://help.waterdata.usgs.gov/code/site_tp_query?fmt=html). We also only want to use sites that have temperature data (USGS parameter code is 00010). Use the argument `parameterCd` and enter the code as a character string, otherwise leading zeroes will be dropped. Recall that you can see a table of all parameter codes by executing `parameterCdFile` in your console.
@@ -268,7 +268,7 @@ nrow(data_sc_stream_temp)
 ## [1] 683
 ```
 
-We are now down to just 683 rows of data, much less than our original 203,528 rows. Downloading NWIS data will be covered in the next section, [readNWIS](/usgs-packages/dataRetrieval-readNWIS).
+We are now down to just 683 rows of data, much less than our original 203,526 rows. Downloading NWIS data will be covered in the next section, [readNWIS](/usgs-packages/dataRetrieval-readNWIS).
 
 The `whatNWISdata` function can also be very useful for making quick maps with site locations, see the columns `dec_lat_va` and `dec_long_va` (decimal latitude and longitude value). For instance,
 
@@ -364,10 +364,10 @@ names(wqpcounts_sc)
 ## [17] "x-content-type-options"    "x-xss-protection"         
 ## [19] "strict-transport-security" "x-cache"                  
 ## [21] "via"                       "x-amz-cf-pop"             
-## [23] "x-amz-cf-id"
+## [23] "x-amz-cf-id"               "age"
 ```
 
-This returns a list with 23 different items, including total number of sites, breakdown of the number of sites by source (BioData, NWIS, STORET), total number of records, and breakdown of records count by source. Let's just look at total number of sites and total number of records.
+This returns a list with 24 different items, including total number of sites, breakdown of the number of sites by source (BioData, NWIS, STORET), total number of records, and breakdown of records count by source. Let's just look at total number of sites and total number of records.
 
 
 ```r
@@ -375,7 +375,7 @@ wqpcounts_sc[['total-site-count']]
 ```
 
 ```
-## [1] 7608
+## [1] 7607
 ```
 
 ```r
@@ -383,10 +383,10 @@ wqpcounts_sc[['total-result-count']]
 ```
 
 ```
-## [1] 4010616
+## [1] 4018586
 ```
 
-This doesn't provide any information about the sites, just the total number. I know that with 4,010,616 results, I will want to add more criteria before trying to download. Let's continue to add query parameters before moving to `whatWQPsites`.
+This doesn't provide any information about the sites, just the total number. I know that with 4,018,586 results, I will want to add more criteria before trying to download. Let's continue to add query parameters before moving to `whatWQPsites`.
 
 
 ```r
@@ -397,7 +397,7 @@ wqpcounts_sc_stream[['total-site-count']]
 ```
 
 ```
-## [1] 2143
+## [1] 2257
 ```
 
 ```r
@@ -405,10 +405,10 @@ wqpcounts_sc_stream[['total-result-count']]
 ```
 
 ```
-## [1] 1868560
+## [1] 2011036
 ```
 
-1,868,560 results are still a lot to download. Let's add more levels of criteria:
+2,011,036 results are still a lot to download. Let's add more levels of criteria:
 
 
 ```r
@@ -421,7 +421,7 @@ wqpcounts_sc_stream_temp[['total-site-count']]
 ```
 
 ```
-## [1] 1575
+## [1] 1683
 ```
 
 ```r
@@ -429,10 +429,10 @@ wqpcounts_sc_stream_temp[['total-result-count']]
 ```
 
 ```
-## [1] 140472
+## [1] 148463
 ```
 
-140,472 is little more manageble. We can also easily compare avilable stream temperature and lake temperature data.
+148,463 is little more manageble. We can also easily compare avilable stream temperature and lake temperature data.
 
 
 ```r
@@ -446,7 +446,7 @@ wqpcounts_sc_stream_temp[['total-site-count']]
 ```
 
 ```
-## [1] 1575
+## [1] 1683
 ```
 
 ```r
@@ -454,7 +454,7 @@ wqpcounts_sc_lake_temp[['total-site-count']]
 ```
 
 ```
-## [1] 660
+## [1] 712
 ```
 
 ```r
@@ -463,7 +463,7 @@ wqpcounts_sc_stream_temp[['total-result-count']]
 ```
 
 ```
-## [1] 140472
+## [1] 148463
 ```
 
 ```r
@@ -471,7 +471,7 @@ wqpcounts_sc_lake_temp[['total-result-count']]
 ```
 
 ```
-## [1] 52494
+## [1] 60607
 ```
 
 From these query results, it looks like South Carolina has much more stream data than it does lake data.
@@ -480,7 +480,7 @@ Now, let's try our South Carolina stream temperature query with `whatWQPsites` a
 
 ### whatWQPsites
 
-`whatWQPsites` gives back site information that matches your search criteria. You can use any of the regular WQP web service arguments here. We are going to use `whatWQPsites` with the final criteria of the last query summary call - state, site type, parameter, and the earliest start date. This should return the same amount of sites as the last `readWQPdata` query did, 1,575.
+`whatWQPsites` gives back site information that matches your search criteria. You can use any of the regular WQP web service arguments here. We are going to use `whatWQPsites` with the final criteria of the last query summary call - state, site type, parameter, and the earliest start date. This should return the same amount of sites as the last `readWQPdata` query did, 1,683.
 
 
 ```r
@@ -494,7 +494,7 @@ nrow(wqpsites_sc_stream_temp)
 ```
 
 ```
-## [1] 1575
+## [1] 1683
 ```
 
 ```r
@@ -688,12 +688,12 @@ head(MauiCo_avgdailyQ)
 
 ```
 ##   agency_cd  site_no   dateTime X_00060_00003 X_00060_00003_cd tz_cd
-## 1      USGS 16400000 2022-09-28          3.44                P   UTC
-## 2      USGS 16401000 1929-08-31         18.00                A   UTC
-## 3      USGS 16402000 1957-07-31         51.00                A   UTC
-## 4      USGS 16403000 1957-06-30          5.50                A   UTC
-## 5      USGS 16403600 1970-09-30          2.40                A   UTC
-## 6      USGS 16403900 1996-09-30          1.30                A   UTC
+## 1      USGS 16400000 2022-10-08          21.5                P   UTC
+## 2      USGS 16401000 1929-08-31          18.0                A   UTC
+## 3      USGS 16402000 1957-07-31          51.0                A   UTC
+## 4      USGS 16403000 1957-06-30           5.5                A   UTC
+## 5      USGS 16403600 1970-09-30           2.4                A   UTC
+## 6      USGS 16403900 1996-09-30           1.3                A   UTC
 ```
 
 ```r
@@ -729,7 +729,7 @@ head(MauiHUC8_mindailyT)
 ## 3      USGS 16520000 2004-04-14          17.5                A   UTC
 ## 4      USGS 16527000 2004-01-13          15.4                A   UTC
 ## 5      USGS 16555000 2004-01-13          16.4                A   UTC
-## 6      USGS 16618000 2022-09-28          20.5                P   UTC
+## 6      USGS 16618000 2022-10-08          20.8                P   UTC
 ```
 
 ```r
@@ -767,32 +767,26 @@ names(SaltLake_totalN)
 ##  [5] "sample_end_dt"                       "sample_end_tm"                      
 ##  [7] "tm_datum_rlbty_cd"                   "coll_ent_cd"                        
 ##  [9] "medium_cd"                           "tu_id"                              
-## [11] "body_part_id"                        "p00004"                             
-## [13] "p00010"                              "p00020"                             
-## [15] "p00025"                              "p00041"                             
-## [17] "p00061"                              "p00063"                             
-## [19] "p00065"                              "p00095"                             
-## [21] "p00098"                              "p00191"                             
-## [23] "p00300"                              "p00301"                             
-## [25] "p00400"                              "p00480"                             
-## [27] "p01300"                              "p01305"                             
-## [29] "p01320"                              "p01325"                             
-## [31] "p01330"                              "p01340"                             
-## [33] "p01345"                              "p01350"                             
-## [35] "p30207"                              "p30209"                             
-## [37] "p30211"                              "p50280"                             
-## [39] "p70305"                              "p71820"                             
-## [41] "p71999"                              "p72012"                             
-## [43] "p72013"                              "p72020"                             
-## [45] "p72105"                              "p72263"                             
-## [47] "p81904"                              "p82398"                             
-## [49] "p84164"                              "p84171"                             
-## [51] "p84182"                              "p99111"                             
-## [53] "p99156"                              "p99159"                             
-## [55] "p99171"                              "p99173"                             
-## [57] "p99206"                              "sample_start_time_datum_cd_reported"
-## [59] "sample_end_time_datum_cd_reported"   "startDateTime"                      
-## [61] "tz_cd"
+## [11] "body_part_id"                        "p00010"                             
+## [13] "p00020"                              "p00025"                             
+## [15] "p00061"                              "p00065"                             
+## [17] "p00095"                              "p00098"                             
+## [19] "p00191"                              "p00300"                             
+## [21] "p00301"                              "p00400"                             
+## [23] "p00480"                              "p30207"                             
+## [25] "p30209"                              "p30211"                             
+## [27] "p50280"                              "p70305"                             
+## [29] "p71820"                              "p71999"                             
+## [31] "p72012"                              "p72013"                             
+## [33] "p72020"                              "p72104"                             
+## [35] "p72219"                              "p72220"                             
+## [37] "p72263"                              "p82398"                             
+## [39] "p84164"                              "p84171"                             
+## [41] "p84182"                              "p99111"                             
+## [43] "p99156"                              "p99159"                             
+## [45] "p99206"                              "sample_start_time_datum_cd_reported"
+## [47] "sample_end_time_datum_cd_reported"   "startDateTime"                      
+## [49] "tz_cd"
 ```
 
 ```r
@@ -801,7 +795,7 @@ length(unique(SaltLake_totalN$site_no))
 ```
 
 ```
-## [1] 10
+## [1] 9
 ```
 
 ### readNWISdv
@@ -1952,7 +1946,7 @@ nrow(Everglades_temp_2016_present)
 ```
 
 ```
-## [1] 23752
+## [1] 23856
 ```
 
 ### readWQPqw
@@ -2292,7 +2286,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-09-21 UTC" "2022-10-01 UTC"
+## [1] "2022-10-01 UTC" "2022-10-11 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2599,7 +2593,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=670f3c50-b7e4-4770-afa2-2c5f1b8042edOUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=7ab5d203-a6c8-435d-b837-45189c85904bOUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

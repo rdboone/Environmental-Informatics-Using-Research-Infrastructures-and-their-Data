@@ -174,6 +174,10 @@ quantifying-haze-and-redness-to-evaluate-california-wildfires
 phenocam-culmination-activity
 flux-measurements-inter-operability
 learning-objectives-1
+guest-lectures-1
+neon-flux-data-and-inter-operability-part-1
+neon-flux-data-and-inter-operability-part-2
+assignments-in-this-chapter-1
 eddy-co_variance-data-what-does-it-actually-measure
 example-eddy-site
 qaqc-flags

@@ -10,15 +10,15 @@
 
   <meta property="og:title" content="Chapter 2 Introduction to NEON &amp; its Data | Environmental Informatics Using Research Infrastructures and their Data" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="//Users/rohan/katharynduffy.github.io/images/EcoInfo4.png" />
+  <meta property="og:image" content="//Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/images/EcoInfo4.png" />
   <meta property="og:description" content="Course text for NAU INF 550" />
-  <meta name="github-repo" content="rdboone/katharynduffy.github.io" />
+  <meta name="github-repo" content="rdboone/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 2 Introduction to NEON &amp; its Data | Environmental Informatics Using Research Infrastructures and their Data" />
   
   <meta name="twitter:description" content="Course text for NAU INF 550" />
-  <meta name="twitter:image" content="//Users/rohan/katharynduffy.github.io/images/EcoInfo4.png" />
+  <meta name="twitter:image" content="//Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/images/EcoInfo4.png" />
 
 <meta name="author" content="Dr. Katharyn Duffy, Dr. Ben Ruddell" />
 
@@ -1119,7 +1119,7 @@ to the function are:</p>
 ## Copied the most recent publication of categoricalCodes file to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 4 data tables and 4 metadata tables!
-## Stacking took 0.7870159 secs</code></pre>
+## Stacking took 0.711849 secs</code></pre>
 <p>Now, use the <code>getLocTOS()</code> function in the <code>geoNEON</code> package to get
 precise locations for the tagged plants. You can refer to the package
 documentation for more details.</p>
@@ -1535,7 +1535,7 @@ to access NEON data.</li>
 ## Copied the most recent publication of categoricalCodes file to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 4 data tables and 4 metadata tables!
-## Stacking took 0.510011 secs</code></pre>
+## Stacking took 0.6172729 secs</code></pre>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction-to-neon-its-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(veglist)</span></code></pre></div>
 <pre><code>##                        Length Class      Mode
 ## categoricalCodes_10098  5     data.table list
@@ -1781,7 +1781,7 @@ numbered identifier for the data product:</p>
 <span id="cb40-8"><a href="introduction-to-neon-its-data.html#cb40-8" aria-hidden="true" tabindex="-1"></a>req <span class="ot">&lt;-</span> <span class="fu">GET</span>(<span class="st">&quot;http://data.neonscience.org/api/v0/products/DP1.10003.001&quot;</span>)</span>
 <span id="cb40-9"><a href="introduction-to-neon-its-data.html#cb40-9" aria-hidden="true" tabindex="-1"></a>req</span></code></pre></div>
 <pre><code>## Response [https://data.neonscience.org/api/v0/products/DP1.10003.001]
-##   Date: 2022-09-29 17:30
+##   Date: 2022-10-09 22:41
 ##   Status: 200
 ##   Content-Type: application/json;charset=UTF-8
 ##   Size: 47.6 kB</code></pre>
@@ -2266,56 +2266,56 @@ than one URL.</p>
 <span id="cb54-5"><a href="introduction-to-neon-its-data.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co"># view just the available data files </span></span>
 <span id="cb54-6"><a href="introduction-to-neon-its-data.html#cb54-6" aria-hidden="true" tabindex="-1"></a>brd.files<span class="sc">$</span>data<span class="sc">$</span>files</span></code></pre></div>
 <pre><code>##                                                                               name
-## 1  NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
-## 2                       NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
-## 3         NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
-## 4                NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 5          NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
-## 6                      NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 7   NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
-## 8                          NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 9           NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
-## 10                         NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 11          NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 1                       NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 2         NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
+## 3           NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 4                      NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
+## 5   NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
+## 6          NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
+## 7  NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
+## 8                NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
+## 9                          NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 10                      NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 11               NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
 ## 12    NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.basic.20211222T043153Z.csv
-## 13     NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
-## 14                     NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 15               NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 16                      NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 13                         NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 14          NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 15     NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
+## 16                     NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
 ##      size                              md5 crc32 crc32c
-## 1  343356 5a199b5f04b6d8cf11c22840d82de24a    NA     NA
-## 2    8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
-## 3    1410 9835f082c527eb1b4b136b853ba9b074    NA     NA
-## 4   10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
-## 5   83076 31e36079cd2f74d0899cd01d835350f5    NA     NA
-## 6   11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
-## 7   22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
-## 8   11152 2b6beae1df3c37a100bfae9f82bc93de    NA     NA
-## 9  187787 345ae36c459945f243900995cd0d7f2f    NA     NA
-## 10  10858 8c23069bf1ac232e89eaf4e8da8bf848    NA     NA
-## 11 170547 2237727df2560081f4f5e3f33e3c2ba5    NA     NA
+## 1    8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 2    1410 9835f082c527eb1b4b136b853ba9b074    NA     NA
+## 3  187787 345ae36c459945f243900995cd0d7f2f    NA     NA
+## 4   11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
+## 5   22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
+## 6   83076 31e36079cd2f74d0899cd01d835350f5    NA     NA
+## 7  343356 5a199b5f04b6d8cf11c22840d82de24a    NA     NA
+## 8   10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
+## 9   11152 2b6beae1df3c37a100bfae9f82bc93de    NA     NA
+## 10   8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 11  10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
 ## 12 322242 fed00f0da15c2370158464c6c179a1c0    NA     NA
-## 13  22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
-## 14  11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
-## 15  10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
-## 16   8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 13  10858 8c23069bf1ac232e89eaf4e8da8bf848    NA     NA
+## 14 170547 2237727df2560081f4f5e3f33e3c2ba5    NA     NA
+## 15  22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
+## 16  11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
 ##                                                                                                                                                                                                                           url
-## 1                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
-## 2                                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
-## 3                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
-## 4                                https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 5                          https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
-## 6                                      https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 7                   https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
-## 8                 https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 9  https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
-## 10                   https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 11    https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 1                                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 2                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
+## 3  https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 4                                      https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
+## 5                   https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
+## 6                          https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
+## 7                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
+## 8                                https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
+## 9                 https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 10                                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 11                                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
 ## 12                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.basic.20211222T043153Z.csv
-## 13                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
-## 14                                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 15                                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 16                                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv</code></pre>
+## 13                   https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 14    https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 15                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
+## 16                                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv</code></pre>
 <p>In this output, <code>name</code> and <code>url</code> are key fields. It provides us with the
 names of the files available for this site and month, and URLs where we
 can get the files. We’ll use the file names to pick which ones we want.</p>
@@ -2421,16 +2421,16 @@ from Moab in June 2017 this time.</p>
 <span id="cb58-14"><a href="introduction-to-neon-its-data.html#cb58-14" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(tmp.files<span class="sc">$</span>data<span class="sc">$</span>files<span class="sc">$</span>name) <span class="co"># There are a lot of available files</span></span></code></pre></div>
 <pre><code>## [1] 188</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introduction-to-neon-its-data.html#cb60-1" aria-hidden="true" tabindex="-1"></a>tmp.files<span class="sc">$</span>data<span class="sc">$</span>files<span class="sc">$</span>name[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]   <span class="co"># Let&#39;s print the first 10</span></span></code></pre></div>
-<pre><code>##  [1] &quot;NEON.D13.MOAB.DP1.00041.001.variables.20211210T224045Z.csv&quot;                             
-##  [2] &quot;NEON.D13.MOAB.DP1.00041.001.003.505.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
-##  [3] &quot;NEON.D13.MOAB.DP1.00041.001.001.505.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
-##  [4] &quot;NEON.D13.MOAB.DP1.00041.001.004.509.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
-##  [5] &quot;NEON.D13.MOAB.DP1.00041.001.003.508.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
-##  [6] &quot;NEON.D13.MOAB.DP1.00041.001.004.503.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
-##  [7] &quot;NEON.D13.MOAB.DP1.00041.001.003.505.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
-##  [8] &quot;NEON.D13.MOAB.DP1.00041.001.002.508.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
-##  [9] &quot;NEON.D13.MOAB.DP1.00041.001.005.504.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
-## [10] &quot;NEON.D13.MOAB.DP1.00041.001.002.502.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot;</code></pre>
+<pre><code>##  [1] &quot;NEON.D13.MOAB.DP1.00041.001.001.506.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
+##  [2] &quot;NEON.D13.MOAB.DP1.00041.001.004.505.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
+##  [3] &quot;NEON.D13.MOAB.DP1.00041.001.004.508.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
+##  [4] &quot;NEON.D13.MOAB.DP1.00041.001.004.502.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
+##  [5] &quot;NEON.D13.MOAB.DP1.00041.001.004.502.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
+##  [6] &quot;NEON.D13.MOAB.DP1.00041.001.readme.20220120T173946Z.txt&quot;                                
+##  [7] &quot;NEON.D13.MOAB.DP1.00041.001.005.504.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
+##  [8] &quot;NEON.D13.MOAB.DP1.00041.001.001.506.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv&quot;
+##  [9] &quot;NEON.D13.MOAB.DP1.00041.001.001.504.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot; 
+## [10] &quot;NEON.D13.MOAB.DP1.00041.001.005.509.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv&quot;</code></pre>
 <p>These file names start and end the same way as the observational files,
 but the middle is a little more cryptic. The structure from beginning to
 end is:</p>
@@ -2497,16 +2497,16 @@ Experimental Range (SJER) in March 2017.</p>
 <span id="cb64-16"><a href="introduction-to-neon-its-data.html#cb64-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb64-17"><a href="introduction-to-neon-its-data.html#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="co"># this list of files is very long, so we&#39;ll just look at the first ten</span></span>
 <span id="cb64-18"><a href="introduction-to-neon-its-data.html#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cam.files<span class="sc">$</span>data<span class="sc">$</span>files<span class="sc">$</span>name, <span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;17032816_EH021656(20170328193532)-0922_ort.tif&quot;
-##  [2] &quot;17032816_EH021656(20170328193032)-0877_ort.tif&quot;
-##  [3] &quot;17032816_EH021656(20170328185340)-0573_ort.tif&quot;
-##  [4] &quot;17032816_EH021656(20170328174604)-0014_ort.tif&quot;
-##  [5] &quot;17032816_EH021656(20170328195216)-1070_ort.tif&quot;
-##  [6] &quot;17032816_EH021656(20170328192011)-0803_ort.tif&quot;
-##  [7] &quot;17032816_EH021656(20170328182204)-0324_ort.tif&quot;
-##  [8] &quot;17032816_EH021656(20170328181633)-0279_ort.tif&quot;
-##  [9] &quot;17032816_EH021656(20170328183509)-0428_ort.tif&quot;
-## [10] &quot;17032816_EH021656(20170328182306)-0337_ort.tif&quot;</code></pre>
+<pre><code>##  [1] &quot;17032816_EH021656(20170328201220)-1213_ort.tif&quot;
+##  [2] &quot;17032816_EH021656(20170328195926)-1146_ort.tif&quot;
+##  [3] &quot;17032816_EH021656(20170328200315)-1163_ort.tif&quot;
+##  [4] &quot;17032816_EH021656(20170328201328)-1228_ort.tif&quot;
+##  [5] &quot;17032816_EH021656(20170328181147)-0245_ort.tif&quot;
+##  [6] &quot;17032816_EH021656(20170328185925)-0618_ort.tif&quot;
+##  [7] &quot;17032816_EH021656(20170328175140)-0064_ort.tif&quot;
+##  [8] &quot;17032816_EH021656(20170328184137)-0482_ort.tif&quot;
+##  [9] &quot;17032816_EH021656(20170328184652)-0514_ort.tif&quot;
+## [10] &quot;17032816_EH021656(20170328181633)-0279_ort.tif&quot;</code></pre>
 <p>File names for AOP data are more variable than for IS or OS data;
 different AOP data products use different naming conventions. File
 formats differ by product as well.</p>
@@ -2584,7 +2584,7 @@ through the canopy.</p>
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.370913 secs</code></pre>
+## Stacking took 0.3274581 secs</code></pre>
 <p><strong>Now we can specifically look at the sensor positions file:</strong></p>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introduction-to-neon-its-data.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create object for sens. pos. file</span></span>
 <span id="cb69-2"><a href="introduction-to-neon-its-data.html#cb69-2" aria-hidden="true" tabindex="-1"></a>pos <span class="ot">&lt;-</span> par<span class="sc">$</span>sensor_positions_00024</span>

@@ -2,6 +2,9 @@
 editor_options:
   markdown:
     wrap: 72
+output:
+  html_document:
+    df_print: paged
 ---
 
 # Introduction to NEON & its Data
@@ -535,7 +538,7 @@ veglist <- loadByProduct(dpID="DP1.10098.001", site="WREF", package="basic", che
 ## Copied the most recent publication of categoricalCodes file to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 4 data tables and 4 metadata tables!
-## Stacking took 0.7870159 secs
+## Stacking took 0.711849 secs
 ```
 
 Now, use the `getLocTOS()` function in the `geoNEON` package to get
@@ -637,7 +640,7 @@ veglist <- loadByProduct(dpID="DP1.10098.001", site="WREF", package="basic", che
 ## Copied the most recent publication of categoricalCodes file to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 4 data tables and 4 metadata tables!
-## Stacking took 0.510011 secs
+## Stacking took 0.6172729 secs
 ```
 
 ```r
@@ -943,7 +946,7 @@ req
 
 ```
 ## Response [https://data.neonscience.org/api/v0/products/DP1.10003.001]
-##   Date: 2022-09-29 17:30
+##   Date: 2022-10-09 22:41
 ##   Status: 200
 ##   Content-Type: application/json;charset=UTF-8
 ##   Size: 47.6 kB
@@ -1483,56 +1486,56 @@ brd.files$data$files
 
 ```
 ##                                                                               name
-## 1  NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
-## 2                       NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
-## 3         NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
-## 4                NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 5          NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
-## 6                      NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 7   NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
-## 8                          NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 9           NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
-## 10                         NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 11          NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 1                       NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 2         NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
+## 3           NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 4                      NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
+## 5   NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
+## 6          NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
+## 7  NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
+## 8                NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
+## 9                          NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 10                      NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 11               NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
 ## 12    NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.basic.20211222T043153Z.csv
-## 13     NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
-## 14                     NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 15               NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 16                      NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 13                         NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 14          NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 15     NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
+## 16                     NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
 ##      size                              md5 crc32 crc32c
-## 1  343356 5a199b5f04b6d8cf11c22840d82de24a    NA     NA
-## 2    8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
-## 3    1410 9835f082c527eb1b4b136b853ba9b074    NA     NA
-## 4   10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
-## 5   83076 31e36079cd2f74d0899cd01d835350f5    NA     NA
-## 6   11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
-## 7   22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
-## 8   11152 2b6beae1df3c37a100bfae9f82bc93de    NA     NA
-## 9  187787 345ae36c459945f243900995cd0d7f2f    NA     NA
-## 10  10858 8c23069bf1ac232e89eaf4e8da8bf848    NA     NA
-## 11 170547 2237727df2560081f4f5e3f33e3c2ba5    NA     NA
+## 1    8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 2    1410 9835f082c527eb1b4b136b853ba9b074    NA     NA
+## 3  187787 345ae36c459945f243900995cd0d7f2f    NA     NA
+## 4   11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
+## 5   22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
+## 6   83076 31e36079cd2f74d0899cd01d835350f5    NA     NA
+## 7  343356 5a199b5f04b6d8cf11c22840d82de24a    NA     NA
+## 8   10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
+## 9   11152 2b6beae1df3c37a100bfae9f82bc93de    NA     NA
+## 10   8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 11  10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
 ## 12 322242 fed00f0da15c2370158464c6c179a1c0    NA     NA
-## 13  22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
-## 14  11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
-## 15  10522 1ccac9924bee55f42ca37e2d7d07746f    NA     NA
-## 16   8670 437dd6434e1cd8538dc9676dcf6ca7f9    NA     NA
+## 13  10858 8c23069bf1ac232e89eaf4e8da8bf848    NA     NA
+## 14 170547 2237727df2560081f4f5e3f33e3c2ba5    NA     NA
+## 15  22623 3850ca4f9abcfc0544bc5722f1e07a1a    NA     NA
+## 16  11700 d1296d18260b4f83e8605ad078fbf967    NA     NA
 ##                                                                                                                                                                                                                           url
-## 1                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
-## 2                                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
-## 3                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
-## 4                                https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 5                          https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
-## 6                                      https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 7                   https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
-## 8                 https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 9  https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
-## 10                   https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
-## 11    https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 1                                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 2                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_references.expanded.20211222T043153Z.csv
+## 3  https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 4                                      https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
+## 5                   https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.expanded.20211222T043153Z.csv
+## 6                          https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.Bird_Conservancy_of_the_Rockies.brd_personnel.20211222T043153Z.csv
+## 7                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.expanded.20211222T043153Z.csv
+## 8                                https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
+## 9                 https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/expanded/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 10                                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 11                                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
 ## 12                       https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_countdata.2015-07.basic.20211222T043153Z.csv
-## 13                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
-## 14                                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
-## 15                                  https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.categoricalCodes.20211222T043153Z.csv
-## 16                                         https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.variables.20211222T043153Z.csv
+## 13                   https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.readme.20220120T173946Z.txt
+## 14    https://storage.googleapis.com/neon-publication/release/tag/RELEASE-2022/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.EML.20150701-20150705.20220120T173946Z.xml
+## 15                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP1.10003.001.brd_perpoint.2015-07.basic.20211222T043153Z.csv
+## 16                                        https://storage.googleapis.com/neon-publication/NEON.DOM.SITE.DP1.10003.001/WOOD/20150701T000000--20150801T000000/basic/NEON.D09.WOOD.DP0.10003.001.validation.20211222T043153Z.csv
 ```
 
 In this output, `name` and `url` are key fields. It provides us with the
@@ -1678,16 +1681,16 @@ tmp.files$data$files$name[1:10]   # Let's print the first 10
 ```
 
 ```
-##  [1] "NEON.D13.MOAB.DP1.00041.001.variables.20211210T224045Z.csv"                             
-##  [2] "NEON.D13.MOAB.DP1.00041.001.003.505.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
-##  [3] "NEON.D13.MOAB.DP1.00041.001.001.505.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
-##  [4] "NEON.D13.MOAB.DP1.00041.001.004.509.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
-##  [5] "NEON.D13.MOAB.DP1.00041.001.003.508.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
-##  [6] "NEON.D13.MOAB.DP1.00041.001.004.503.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
-##  [7] "NEON.D13.MOAB.DP1.00041.001.003.505.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
-##  [8] "NEON.D13.MOAB.DP1.00041.001.002.508.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
-##  [9] "NEON.D13.MOAB.DP1.00041.001.005.504.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
-## [10] "NEON.D13.MOAB.DP1.00041.001.002.502.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv"
+##  [1] "NEON.D13.MOAB.DP1.00041.001.001.506.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
+##  [2] "NEON.D13.MOAB.DP1.00041.001.004.505.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
+##  [3] "NEON.D13.MOAB.DP1.00041.001.004.508.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
+##  [4] "NEON.D13.MOAB.DP1.00041.001.004.502.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
+##  [5] "NEON.D13.MOAB.DP1.00041.001.004.502.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
+##  [6] "NEON.D13.MOAB.DP1.00041.001.readme.20220120T173946Z.txt"                                
+##  [7] "NEON.D13.MOAB.DP1.00041.001.005.504.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
+##  [8] "NEON.D13.MOAB.DP1.00041.001.001.506.030.ST_30_minute.2017-06.basic.20211210T224045Z.csv"
+##  [9] "NEON.D13.MOAB.DP1.00041.001.001.504.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv" 
+## [10] "NEON.D13.MOAB.DP1.00041.001.005.509.001.ST_1_minute.2017-06.basic.20211210T224045Z.csv"
 ```
 
 These file names start and end the same way as the observational files,
@@ -1777,16 +1780,16 @@ head(cam.files$data$files$name, 10)
 ```
 
 ```
-##  [1] "17032816_EH021656(20170328193532)-0922_ort.tif"
-##  [2] "17032816_EH021656(20170328193032)-0877_ort.tif"
-##  [3] "17032816_EH021656(20170328185340)-0573_ort.tif"
-##  [4] "17032816_EH021656(20170328174604)-0014_ort.tif"
-##  [5] "17032816_EH021656(20170328195216)-1070_ort.tif"
-##  [6] "17032816_EH021656(20170328192011)-0803_ort.tif"
-##  [7] "17032816_EH021656(20170328182204)-0324_ort.tif"
-##  [8] "17032816_EH021656(20170328181633)-0279_ort.tif"
-##  [9] "17032816_EH021656(20170328183509)-0428_ort.tif"
-## [10] "17032816_EH021656(20170328182306)-0337_ort.tif"
+##  [1] "17032816_EH021656(20170328201220)-1213_ort.tif"
+##  [2] "17032816_EH021656(20170328195926)-1146_ort.tif"
+##  [3] "17032816_EH021656(20170328200315)-1163_ort.tif"
+##  [4] "17032816_EH021656(20170328201328)-1228_ort.tif"
+##  [5] "17032816_EH021656(20170328181147)-0245_ort.tif"
+##  [6] "17032816_EH021656(20170328185925)-0618_ort.tif"
+##  [7] "17032816_EH021656(20170328175140)-0064_ort.tif"
+##  [8] "17032816_EH021656(20170328184137)-0482_ort.tif"
+##  [9] "17032816_EH021656(20170328184652)-0514_ort.tif"
+## [10] "17032816_EH021656(20170328181633)-0279_ort.tif"
 ```
 
 File names for AOP data are more variable than for IS or OS data;
@@ -1861,7 +1864,7 @@ par <- loadByProduct(dpID="DP1.00024.001", site="TREE",
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.370913 secs
+## Stacking took 0.3274581 secs
 ```
 
 **Now we can specifically look at the sensor positions file:**

@@ -942,7 +942,7 @@ npn_get_point_data(
 ```
 
 ```
-## Downloading: 980 B     Downloading: 980 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
+## Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
 ```
 
 ```
@@ -1417,7 +1417,7 @@ library(dplyr)
 ```
 
 ```r
-source('/Users/rohan/katharynduffy.github.io/neon_token_source.R')
+source('/Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/neon_token_source.R')
 ```
 
 1.  For the purposes of this exercise we will be focusing on two NEON

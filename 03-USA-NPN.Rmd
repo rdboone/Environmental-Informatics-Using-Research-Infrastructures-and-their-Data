@@ -1257,7 +1257,7 @@ library(rnpn)
 library(ggplot2)
 library(neonUtilities)
 library(dplyr)
-source('/Users/rohan/katharynduffy.github.io/neon_token_source.R')
+source('/Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/neon_token_source.R')
 
 ```
 

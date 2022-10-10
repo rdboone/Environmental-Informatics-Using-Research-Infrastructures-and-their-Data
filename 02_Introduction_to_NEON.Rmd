@@ -2,6 +2,9 @@
 editor_options:
   markdown:
     wrap: 72
+output:
+  html_document:
+    df_print: paged
 ---
 
 # Introduction to NEON & its Data
@@ -511,7 +514,7 @@ to the function are:
 -   package: basic or expanded; we'll begin with a `basic` here
 
 ```{r, echo=FALSE}
-source('/Users/rohan/katharynduffy.github.io/neon_token_source.R')
+source('/Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/neon_token_source.R')
 ```
 
 ```{r, cache=TRUE}

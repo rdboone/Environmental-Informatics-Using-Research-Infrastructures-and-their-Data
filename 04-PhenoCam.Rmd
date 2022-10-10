@@ -56,11 +56,11 @@ At the end of this activity, you will be able to:
 
 ### Assignments in this chapter
 
-  1. *Digital Repeat Photography Written Questions* Demonstrate your knowledge of PhenoCam's philosophy and practices, and identify how these intersect with your own research interests (4.4).
+  - *Digital Repeat Photography Written Questions* Demonstrate your knowledge of PhenoCam's philosophy and practices, and identify how these intersect with your own research interests (4.4).
   
-  2. *Digital Repeat Photography Coding Lab* Download and Manipulate digital repeat photography data using the R packages covered in this chapter (4.13).
+  - *Digital Repeat Photography Coding Lab* Download and Manipulate digital repeat photography data using the R packages covered in this chapter (4.13).
   
-  3. *PhenoCam culmination activity* Summarize a project you might explore using PhenoCam (4.14). 
+  - *PhenoCam culmination activity* Summarize a project you might explore using PhenoCam (4.14). 
   
   
 
@@ -1090,6 +1090,12 @@ or by using the `get_rois()` function.
 
 ```{r}
 # obtaining the list of all the available ROI's on the PhenoCam server
+
+# first, changing timeout option to prevent get_rois() from failing to connect 
+# to the PhenoCam API due to timeout 
+getOption('timeout')
+options(timeout = 300)
+
 rois <- get_rois()
 
 # view what information is returned

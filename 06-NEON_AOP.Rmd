@@ -830,9 +830,9 @@ Note that this function can read in both `.las` and `.laz` file formats.
 #(-drop_z_blow and -drop_z_above). See how we have done this here 
 #for you.
 
-HARV <- lidR::readLAS('/Users/rohan/katharynduffy.github.io/data/NEON_D01_HARV_DP1_727000_4702000_classified_point_cloud_colorized.laz',filter = "-drop_z_below 150 -drop_z_above 325")
+HARV <- lidR::readLAS('/Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/data/NEON_D01_HARV_DP1_727000_4702000_classified_point_cloud_colorized.laz',filter = "-drop_z_below 150 -drop_z_above 325")
 
-TEAK <- lidR::readLAS('/Users/rohan/katharynduffy.github.io/data/NEON_D17_TEAK_DP1_316000_4091000_classified_point_cloud_colorized.laz',filter = "-drop_z_below 1694 -drop_z_above 2500")
+TEAK <- lidR::readLAS('/Users/rohan/Environmental-Informatics-Using-Research-Infrastructures-and-their-Data/data/NEON_D17_TEAK_DP1_316000_4091000_classified_point_cloud_colorized.laz',filter = "-drop_z_below 1694 -drop_z_above 2500")
 
 
 ```
