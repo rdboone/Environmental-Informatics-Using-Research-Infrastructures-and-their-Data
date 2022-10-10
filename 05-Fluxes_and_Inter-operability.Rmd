@@ -73,7 +73,7 @@ inter-operability.
 
 ## Examples of Other Flux Networks: AMERIFLUX & FLUXNET
 
-AmeriFlux is a [network of PI-managed sites]() measuring ecosystem CO2,
+AmeriFlux is a network of PI-managed sites measuring ecosystem CO2,
 water, and energy fluxes in [North, Central and South
 America](https://ameriflux.lbl.gov/sites/site-search/#filter-type=all&has-data=All&site_id=).
 It was established to connect research on field sites representing major
