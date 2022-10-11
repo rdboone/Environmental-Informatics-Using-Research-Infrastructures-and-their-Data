@@ -73,7 +73,7 @@ inter-operability.
 
 ## Examples of Other Flux Networks: AMERIFLUX & FLUXNET
 
-AmeriFlux is a [network of PI-managed sites]() measuring ecosystem CO2,
+AmeriFlux is a network of PI-managed sites measuring ecosystem CO2,
 water, and energy fluxes in [North, Central and South
 America](https://ameriflux.lbl.gov/sites/site-search/#filter-type=all&has-data=All&site_id=).
 It was established to connect research on field sites representing major
@@ -1642,7 +1642,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.339669 secs
+## Stacking took 0.3467989 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found

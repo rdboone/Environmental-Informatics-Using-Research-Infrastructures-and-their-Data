@@ -198,7 +198,6 @@ convert-neon-flux-data-variables-to-ameriflux-fp-standard
 exercises-1
 computational
 neon-aop
-hyperspectral-remote-sensing
 learning-objectives-2
 mapping-the-invisible
 about-hyperspectral-remote-sensing-data
