@@ -1,16 +1,12 @@
 ---
-editor_options: 
-  markdown: 
-    wrap: 72
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 # Flux Measurements & Inter-Operability
 
 > Estimated Time: 3 hours
-
-<div id="ds-challenge" markdown="1">
-
-<div id="ds-challenge" markdown="1">
 
 **Course participants**: As you review this information, please consider
 the final course project that you will work on at the over this
@@ -145,6 +141,7 @@ packages:
 
     install.packages('BiocManager')
     BiocManager::install('rhdf5')
+
 
 
 
@@ -1642,7 +1639,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.3467989 secs
+## Stacking took 0.343425 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found
@@ -5334,7 +5331,10 @@ single NEON HDF5 file:
 
 
 ```r
-vars <- getVarsEddy("./data/filesToStack00200/NEON.D01.HARV.DP4.00200.001.nsae.2018-06.basic.20211220T155630Z.h5")
+files <- list.files("./data/filesToStack00200")
+vars <- getVarsEddy(paste0("./data/filesToStack00200/",
+                           files[grep(pattern = paste0("HARV", ".*.", ".*.h5$"),
+                                      x = files)][1]))
 knitr::kable(head(vars))
 ```
 
@@ -5540,6 +5540,12 @@ g <- ggplot(iso.d, aes(y=verticalPosition)) +
 g
 ```
 
+```
+## Warning: Removed 55 row(s) containing missing values (geom_path).
+```
+
+<img src="05-Fluxes_and_Inter-operability_files/figure-html/unnamed-chunk-28-1.png" width="672" />
+
     Warning message:
     “Removed 55 rows containing missing values (geom_path).”
 
@@ -5554,6 +5560,17 @@ Install and load packages
 
 
 ```r
+#Install most  recent version of ffbase from GitHub, this is a package dependency of eddy4R.base
+
+devtools::install_github("edwindj/ffbase", subdir="pkg")
+```
+
+```
+## Skipping install of 'ffbase' from a github remote, the SHA1 (14f75881) has not changed since last install.
+##   Use `force = TRUE` to force installation
+```
+
+```r
 #Install NEONprocIS.base from GitHub, this package is a dependency of eddy4R.base
 
 devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
@@ -5563,9 +5580,14 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
                          repos=c(BiocManager::repositories(),   # for dependencies on Bioconductor packages
                                  "https://cran.rstudio.com/")       # for CRAN
 )
+```
 
+```
+## Skipping install of 'NEONprocIS.base' from a github remote, the SHA1 (169ddfba) has not changed since last install.
+##   Use `force = TRUE` to force installation
+```
 
-
+```r
 #Install eddy4R.base from GitHub
 
 devtools::install_github(repo="NEONScience/eddy4R",
@@ -5575,7 +5597,14 @@ devtools::install_github(repo="NEONScience/eddy4R",
                          repos=c(BiocManager::repositories(),   # for dependencies on Bioconductor packages
                                  "https://cran.rstudio.com/")       # for CRAN
 )
+```
 
+```
+## Skipping install of 'eddy4R.base' from a github remote, the SHA1 (d77bd677) has not changed since last install.
+##   Use `force = TRUE` to force installation
+```
+
+```r
 packReq <- c("rhdf5", "eddy4R.base", "jsonlite", "lubridate")
 
 lapply(packReq, function(x) {
@@ -5584,6 +5613,67 @@ lapply(packReq, function(x) {
     install.packages(x)
     library(x, character.only = TRUE)
   }})
+```
+
+```
+## [1] "rhdf5"
+```
+
+```
+## Loading required package: rhdf5
+```
+
+```
+## [1] "eddy4R.base"
+```
+
+```
+## Loading required package: eddy4R.base
+```
+
+```
+## [1] "jsonlite"
+```
+
+```
+## Loading required package: jsonlite
+```
+
+```
+## [1] "lubridate"
+```
+
+```
+## Loading required package: lubridate
+```
+
+```
+## 
+## Attaching package: 'lubridate'
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     date, intersect, setdiff, union
+```
+
+```
+## [[1]]
+## NULL
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL
+## 
+## [[4]]
+## NULL
+```
+
+```r
+h5disableFileLocking()
 ```
 
 Select your site of interest from the list of NEON sites below.
@@ -5599,7 +5689,6 @@ site <- "KONZ"
   #"WOOD","RMNP","OAES","YELL","MOAB","STER","JORN",
   #"SRER","ONAQ","ABBY","WREF","SJER","SOAP","TEAK",
   #"TOOL","BONA","DEJU","HEAL","PUUM"
-}
 ```
 
 If you would like to download a set range of dates, define the following
@@ -5711,6 +5800,10 @@ date range are specified as intended
   print(msg)
 ```
 
+```
+## [1] "Starting Ameriflux FP standard conversion processing workflow for KONZ for 2020-03-01 to 2020-05-31"
+```
+
 Create output directory by checking if the download directory exists and
 create it if not
 
@@ -5723,23 +5816,24 @@ create it if not
   if(!dir.exists(DirOut)) dir.create(DirOut, recursive = TRUE)
 ```
 
+
 Download and extract data
 
 
 ```r
-  #Initialize data List
+#Initialize data List
   dataList <- list()
-  
+
   #Read data from the API
   dataList <- lapply(setDate, function(x) {
-    # year <- lubridate::year(x)
-    # mnth <- lubridate::month(x)
     date <- stringr::str_extract(x, pattern = paste0("[0-9]{4}", "-", "[0-9]{2}"))
-    tryCatch(neonUtilities::zipsByProduct(dpID = dpID, site = site, startdate = date, enddate = date, package = "basic", savepath = DirDnld, check.size = FALSE), error=function(e) NULL)
+    tryCatch(neonUtilities::zipsByProduct(dpID = dpID, site = site, startdate = date, enddate = date, package =      "basic", savepath = DirDnld, check.size = FALSE), error=function(e) NULL)
     files <- list.files(paste0(DirDnld, "/filesToStack00200"))
-    utils::unzip(paste0(DirDnld, "/filesToStack00200/", files[grep(pattern = paste0(site,".*.", date, ".*.zip"), x = files)]), exdir = paste0(DirDnld, "/filesToStack00200"))
+    utils::unzip(paste0(DirDnld, "/filesToStack00200/", files[grep(pattern = paste0(site,".*.", date, ".*.zip"),     x = files)]), exdir = paste0(DirDnld, "/filesToStack00200"))
     files <- list.files(paste0(DirDnld, "/filesToStack00200"))
-    dataIdx <- rhdf5::h5read(file = paste0(DirDnld, "/filesToStack00200/", max(files[grep(pattern = paste0(site,".*.", date,".*.h5"), x = files)])), name = paste0(site, "/"))
+    R.utils::gunzip(paste0(DirDnld, "/filesToStack00200/", files[grep(pattern = paste0(site, ".*.", date,            ".*.h5.gz"), x = files)]), remove = FALSE)
+    files <- list.files(paste0(DirDnld, "/filesToStack00200"))
+    dataIdx <- rhdf5::h5read(file = paste0(DirDnld, "/filesToStack00200/", max(files[grep(pattern =                  paste0(site,".*.", date,".*.h5$"), x = files)])), name = paste0(site, "/"))
                       
     if(!is.null(dataIdx)){ 
        dataIdx$dp0p <- NULL 
@@ -5758,6 +5852,30 @@ Download and extract data
     }
     return(dataIdx)
   })
+```
+
+```
+## Finding available files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 
+## Downloading files totaling approximately 83.333588 MB
+## Downloading 1 files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
+## Finding available files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 
+## Downloading files totaling approximately 68.719186 MB
+## Downloading 1 files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
+## Finding available files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 
+## Downloading files totaling approximately 69.960912 MB
+## Downloading 1 files
+##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
 ```
 
 Add names to list for year/month combinations
@@ -5860,7 +5978,40 @@ Subset to the Ameriflux variables to convert
         "T_SONIC_SIGMA" = base::sqrt(dataList[[x]]$dp01$data$soni[[paste0(LvlTowr,"_30m")]]$tempSoni$mean)
         , stringsAsFactors = FALSE)
     })
-    
+```
+
+```
+## [1] "000_040"
+## [1] "000_030"
+## [1] "000_020"
+## [1] "000_010"
+```
+
+```
+## Warning in base::sqrt(dataList[[x]]$dp01$data$soni[[paste0(LvlTowr, "_30m")]]
+## $tempSoni$mean): NaNs produced
+```
+
+```
+## [1] "000_040"
+## [1] "000_030"
+## [1] "000_020"
+## [1] "000_010"
+```
+
+```
+## Warning in base::sqrt(dataList[[x]]$dp01$data$soni[[paste0(LvlTowr, "_30m")]]
+## $tempSoni$mean): NaNs produced
+```
+
+```
+## [1] "000_040"
+## [1] "000_030"
+## [1] "000_020"
+## [1] "000_010"
+```
+
+```r
     names(dataListFlux) <- names(dataList)
 ```
 
@@ -5872,6 +6023,12 @@ memory
     dataDfFlux <- do.call(rbind.data.frame,dataListFlux)
     rm(list=c("dataListFlux","dataList"))
     gc()
+```
+
+```
+##            used  (Mb) gc trigger  (Mb) max used  (Mb)
+## Ncells  1489022  79.6    3198067 170.8  3198067 170.8
+## Vcells 16216279 123.8   69547023 530.7 72291190 551.6
 ```
 
 Regularize timeseries to 30 minutes in case timestamps are missing from
@@ -5920,6 +6077,20 @@ spreading the impact of lost measurements throughout the day.
       dataDfFlux[[paste0("CO2_1_",x,"_2")]][(which(dataDfFlux[[paste0("qfCO2_1_",x,"_2")]] == 1))] <<- NaN
       dataDfFlux[[paste0("CO2_1_",x,"_3")]][(which(dataDfFlux[[paste0("qfCO2_1_",x,"_3")]] == 1))] <<- NaN
     })
+```
+
+```
+## $`000_040`
+## [1] NaN
+## 
+## $`000_030`
+## [1] NaN
+## 
+## $`000_020`
+## [1] NaN
+## 
+## $`000_010`
+## [1] NaN
 ```
 
 Remove quality flagging variables from output
@@ -5989,7 +6160,119 @@ values with -9999
     #Apply the range test to the output, and replace values with NaN
     lapply(names(dataDfFlux), function(x) {
       dataDfFlux[which(dataDfFlux[,x]<Rng$Min[[x]] | dataDfFlux[,x]>Rng$Max[[x]]),x] <<- NaN})
-    
+```
+
+```
+## [[1]]
+## [1] NaN
+## 
+## [[2]]
+## [1] NaN
+## 
+## [[3]]
+## [1] NaN
+## 
+## [[4]]
+## [1] NaN
+## 
+## [[5]]
+## [1] NaN
+## 
+## [[6]]
+## [1] NaN
+## 
+## [[7]]
+## [1] NaN
+## 
+## [[8]]
+## [1] NaN
+## 
+## [[9]]
+## [1] NaN
+## 
+## [[10]]
+## [1] NaN
+## 
+## [[11]]
+## [1] NaN
+## 
+## [[12]]
+## [1] NaN
+## 
+## [[13]]
+## [1] NaN
+## 
+## [[14]]
+## [1] NaN
+## 
+## [[15]]
+## [1] NaN
+## 
+## [[16]]
+## [1] NaN
+## 
+## [[17]]
+## [1] NaN
+## 
+## [[18]]
+## [1] NaN
+## 
+## [[19]]
+## [1] NaN
+## 
+## [[20]]
+## [1] NaN
+## 
+## [[21]]
+## [1] NaN
+## 
+## [[22]]
+## [1] NaN
+## 
+## [[23]]
+## [1] NaN
+## 
+## [[24]]
+## [1] NaN
+## 
+## [[25]]
+## [1] NaN
+## 
+## [[26]]
+## [1] NaN
+## 
+## [[27]]
+## [1] NaN
+## 
+## [[28]]
+## [1] NaN
+## 
+## [[29]]
+## [1] NaN
+## 
+## [[30]]
+## [1] NaN
+## 
+## [[31]]
+## [1] NaN
+## 
+## [[32]]
+## [1] NaN
+## 
+## [[33]]
+## [1] NaN
+## 
+## [[34]]
+## [1] NaN
+## 
+## [[35]]
+## [1] NaN
+## 
+## [[36]]
+## [1] NaN
+```
+
+```r
     # Delete any NEE that have either FC or SC removed
     dataDfFlux[is.na(dataDfFlux$FC) | is.na(dataDfFlux$SC),"NEE"] <- NaN
     
@@ -6014,6 +6297,17 @@ Clean up environment
 ```r
   rm(list="dataDfFlux")
   gc()
+```
+
+```
+##            used  (Mb) gc trigger  (Mb) max used  (Mb)
+## Ncells  1491970  79.7    3198067 170.8  3198067 170.8
+## Vcells 16291400 124.3   55637619 424.5 72291190 551.6
+```
+
+
+```
+##  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ```
 
 ## Exercises
