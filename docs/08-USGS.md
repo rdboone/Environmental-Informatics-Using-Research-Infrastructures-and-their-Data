@@ -688,7 +688,7 @@ head(MauiCo_avgdailyQ)
 
 ```
 ##   agency_cd  site_no   dateTime X_00060_00003 X_00060_00003_cd tz_cd
-## 1      USGS 16400000 2022-10-09          11.7                P   UTC
+## 1      USGS 16400000 2022-10-11          15.1                P   UTC
 ## 2      USGS 16401000 1929-08-31          18.0                A   UTC
 ## 3      USGS 16402000 1957-07-31          51.0                A   UTC
 ## 4      USGS 16403000 1957-06-30           5.5                A   UTC
@@ -729,7 +729,7 @@ head(MauiHUC8_mindailyT)
 ## 3      USGS 16520000 2004-04-14          17.5                A   UTC
 ## 4      USGS 16527000 2004-01-13          15.4                A   UTC
 ## 5      USGS 16555000 2004-01-13          16.4                A   UTC
-## 6      USGS 16618000 2022-10-09          20.6                P   UTC
+## 6      USGS 16618000 2022-10-11          20.5                P   UTC
 ```
 
 ```r
@@ -782,11 +782,11 @@ names(SaltLake_totalN)
 ## [35] "p72219"                              "p72220"                             
 ## [37] "p72263"                              "p82398"                             
 ## [39] "p84164"                              "p84171"                             
-## [41] "p84182"                              "p99111"                             
-## [43] "p99156"                              "p99159"                             
-## [45] "p99206"                              "sample_start_time_datum_cd_reported"
-## [47] "sample_end_time_datum_cd_reported"   "startDateTime"                      
-## [49] "tz_cd"
+## [41] "p84182"                              "p99105"                             
+## [43] "p99111"                              "p99156"                             
+## [45] "p99159"                              "p99206"                             
+## [47] "sample_start_time_datum_cd_reported" "sample_end_time_datum_cd_reported"  
+## [49] "startDateTime"                       "tz_cd"
 ```
 
 ```r
@@ -795,7 +795,7 @@ length(unique(SaltLake_totalN$site_no))
 ```
 
 ```
-## [1] 9
+## [1] 12
 ```
 
 ### readNWISdv
@@ -2286,7 +2286,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-10-02 UTC" "2022-10-12 UTC"
+## [1] "2022-10-04 UTC" "2022-10-14 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2593,7 +2593,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=aa36d023-e9cc-41d7-9b3f-8ac113806729OUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=ab2aaf27-1755-4829-a69d-1564a1e12626OUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

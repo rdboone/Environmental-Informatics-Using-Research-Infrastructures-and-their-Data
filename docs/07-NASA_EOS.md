@@ -289,8 +289,8 @@ prettify(token_response)                                       # Print the prett
 ```
 ## {
 ##     "token_type": "Bearer",
-##     "token": "2Bsi3J4atHWt82Dtn7zrCZQ_zW6hVgDfGX4xEzhNlOjQuA5qn2CZezfiZssaWGfDqlMmvurEUkYk22wx4B9Kmg",
-##     "expiration": "2022-10-11T21:34:27Z"
+##     "token": "-UXsO38C8yKtS2dkEQr0dpbk397Oa-s8d2MtqzdYmHkzkLAg9hZ9Sx445pu8MqqnGcm_VYFpvHdEaEmJSlhE8g",
+##     "expiration": "2022-10-14T19:16:11Z"
 ## }
 ## 
 ```
@@ -1621,8 +1621,8 @@ prettify(token_response)                                       # Print the prett
 ```
 ## {
 ##     "token_type": "Bearer",
-##     "token": "2Bsi3J4atHWt82Dtn7zrCZQ_zW6hVgDfGX4xEzhNlOjQuA5qn2CZezfiZssaWGfDqlMmvurEUkYk22wx4B9Kmg",
-##     "expiration": "2022-10-11T21:34:27Z"
+##     "token": "-UXsO38C8yKtS2dkEQr0dpbk397Oa-s8d2MtqzdYmHkzkLAg9hZ9Sx445pu8MqqnGcm_VYFpvHdEaEmJSlhE8g",
+##     "expiration": "2022-10-14T19:16:11Z"
 ## }
 ## 
 ```
@@ -1656,7 +1656,7 @@ sprintf("AppEEARS currently supports %i products." ,length(products))
 ```
 
 ```
-## [1] "AppEEARS currently supports 162 products."
+## [1] "AppEEARS currently supports 159 products."
 ```
 
 Next, look at the product's names and descriptions. Below, the 'ProductAndVersion' and 'Description' are printed for all products.
@@ -1826,9 +1826,6 @@ for (p in products){
 ## [1] "ECO1BMAPRAD.001 is Resampled Radiance from LP DAAC"
 ## [1] "ECO3ETALEXI.001 is Evapotranspiration dis-ALEXI from LP DAAC"
 ## [1] "ECO4ESIALEXI.001 is Evaporative Stress Index dis-ALEXI from LP DAAC"
-## [1] "ECO_L1B_GEO.002 is Geolocation from LP DAAC"
-## [1] "ECO_L2_CLOUD.002 is Cloud Mask Instantaneous from LP DAAC"
-## [1] "ECO_L2_LSTE.002 is Swath Land Surface Temperature and Emissivity Instantaneous from LP DAAC"
 ## [1] "HLSS30.020 is Land Surface Reflectance from LP DAAC"
 ## [1] "HLSL30.020 is Land Surface Reflectance from LP DAAC"
 ```
@@ -2113,110 +2110,9 @@ prettify(status_response)                                           # Print the 
 ```
 
 ```
-## [
-##     {
-##         "error": {
-## 
-##         },
-##         "params": {
-##             "dates": [
-##                 {
-##                     "endDate": "10-01-2020",
-##                     "startDate": "01-01-2020"
-##                 }
-##             ],
-##             "layers": [
-##                 {
-##                     "layer": "LST_Day_1km",
-##                     "product": "MOD11A2.006"
-##                 },
-##                 {
-##                     "layer": "LST_Night_1km",
-##                     "product": "MOD11A2.006"
-##                 },
-##                 {
-##                     "layer": "Lai_500m",
-##                     "product": "MCD15A3H.006"
-##                 }
-##             ]
-##         },
-##         "status": "done",
-##         "created": "2022-10-09T21:38:53.984015",
-##         "task_id": "a283f14d-b2de-460c-ba0b-e066ace431e4",
-##         "updated": "2022-10-09T21:41:19.654080",
-##         "user_id": "rdb273@nau.edu",
-##         "attempts": 1,
-##         "estimate": {
-##             "request_size": 204
-##         },
-##         "retry_at": {
-## 
-##         },
-##         "completed": "2022-10-09T21:41:19.636292",
-##         "has_swath": false,
-##         "task_name": "NEON SOAP SJER Vegetation",
-##         "task_type": "point",
-##         "api_version": "v1",
-##         "svc_version": "3.13",
-##         "web_version": {
-## 
-##         },
-##         "size_category": "0",
-##         "has_nsidc_daac": false,
-##         "expires_on": "2022-11-08T21:41:19.654080"
-##     },
-##     {
-##         "error": {
-## 
-##         },
-##         "params": {
-##             "dates": [
-##                 {
-##                     "endDate": "10-01-2020",
-##                     "startDate": "01-01-2020"
-##                 }
-##             ],
-##             "layers": [
-##                 {
-##                     "layer": "LST_Day_1km",
-##                     "product": "MOD11A2.006"
-##                 },
-##                 {
-##                     "layer": "LST_Night_1km",
-##                     "product": "MOD11A2.006"
-##                 },
-##                 {
-##                     "layer": "Lai_500m",
-##                     "product": "MCD15A3H.006"
-##                 }
-##             ]
-##         },
-##         "status": "done",
-##         "created": "2022-10-09T21:34:28.475495",
-##         "task_id": "239d2148-6e07-4f78-b137-2bfbae15f6a6",
-##         "updated": "2022-10-09T21:36:17.827265",
-##         "user_id": "rdb273@nau.edu",
-##         "attempts": 1,
-##         "estimate": {
-##             "request_size": 204
-##         },
-##         "retry_at": {
-## 
-##         },
-##         "completed": "2022-10-09T21:36:17.810383",
-##         "has_swath": false,
-##         "task_name": "NEON SOAP SJER Vegetation",
-##         "task_type": "point",
-##         "api_version": "v1",
-##         "svc_version": "3.13",
-##         "web_version": {
-## 
-##         },
-##         "size_category": "0",
-##         "has_nsidc_daac": false,
-##         "expires_on": "2022-11-08T21:36:17.827265"
-##     }
-## ]
+## {
+##     "message": "You don't have the permission to access the requested resource. It is either read-protected or not readable by the server."
+## }
 ## 
 ```
 

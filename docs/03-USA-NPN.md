@@ -942,7 +942,7 @@ npn_get_point_data(
 ```
 
 ```
-## Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
+## Downloading: 980 B     Downloading: 980 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
 ```
 
 ```
@@ -1506,8 +1506,8 @@ unique(phe_statusintensity$phenophaseName)
 ```
 ##  [1] "Colored leaves"       "Falling leaves"       "Leaves"              
 ##  [4] "Breaking leaf buds"   "Increasing leaf size" "Open flowers"        
-##  [7] "Initial growth"       "Young needles"        "Open pollen cones"   
-## [10] "Breaking needle buds" "Emerging needles"     "Young leaves"
+##  [7] "Initial growth"       "Young needles"        "Breaking needle buds"
+## [10] "Open pollen cones"    "Emerging needles"     "Young leaves"
 ```
 
 And select a single taxon:

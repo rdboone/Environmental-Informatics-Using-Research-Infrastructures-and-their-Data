@@ -1639,7 +1639,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.343425 secs
+## Stacking took 0.3349941 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found
@@ -5861,21 +5861,21 @@ Download and extract data
 ## Downloading files totaling approximately 83.333588 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 68.719186 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 69.960912 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmpygs9ry/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
 ```
 
 Add names to list for year/month combinations
@@ -6027,8 +6027,8 @@ memory
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1489022  79.6    3198067 170.8  3198067 170.8
-## Vcells 16216279 123.8   69547023 530.7 72291190 551.6
+## Ncells  1488060  79.5    3173575 169.5  3173575 169.5
+## Vcells 16213942 123.8   72281189 551.5 75226210 574.0
 ```
 
 Regularize timeseries to 30 minutes in case timestamps are missing from
@@ -6301,8 +6301,8 @@ Clean up environment
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1491970  79.7    3198067 170.8  3198067 170.8
-## Vcells 16291400 124.3   55637619 424.5 72291190 551.6
+## Ncells  1491008  79.7    3173575 169.5  3173575 169.5
+## Vcells 16289063 124.3   57824952 441.2 75226210 574.0
 ```
 
 
