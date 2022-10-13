@@ -46,6 +46,14 @@ After completing this tutorial, you will be able to:
 
 *Dr. Donal O'Leary*, Reserach Scientist, Education and Outreach, NEON-Battelle, covers NEON LiDAR GEDI Fusion.
 
+### Assignments in this chapter
+
+- *NEON AOP Written Questions* Demonstrate your knowledge of NEON AOP's philosophy and practices, and identify how these intersect with your own research interests (6.13).
+
+- *NEON AOP Coding Lab* Access NEON AOP data using the `neonUtilities` package and use it generate LiDAR point clouds with the `lidR` package (6.14).
+
+- *NEON AOP Culmination Write Up* Summarize a project you might explore using Data from NEON AOP (6.15).
+
 ##About Hyperspectral remote sensing
 
 ### Mapping the Invisible
