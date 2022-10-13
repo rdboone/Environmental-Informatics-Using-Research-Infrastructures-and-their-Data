@@ -12,7 +12,49 @@ After completing this tutorial, you will be able to:
   hyperspectral remote sensing data in tools like R or Python.
 * Describe what a "band" is.
 
-##About Hyperspectral remote sensing
+### Guest Lectures
+
+#### Introduction to NEON Airborne Observation Platform
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3zDshjf3Hu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour, 10 minutes
+
+*John Musinsky*, Researd Scientist, Remote Sensing, NEON-Battelle, introduces the NEON Airborne Observation Platform.
+
+#### NEON AOP: Introduction to LiDAR Data
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hNVhvP7rAnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour
+
+*Dr. Tristan Goulden*, Lead Research Scientist, Remote Sensing, NEON-Battelle, introduces LiDAR data.
+
+#### NEON AOP: Introcudtion to Hyperspectral Data
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jlOCH3H1PWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour, 5 minutes
+
+*Dr. Tristan Goulden*, Lead Research Scientist, Remote Sensing, NEON-Battelle, introduces hyperspectral data.
+
+#### NEON LiDAR GEDI Fusion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8HbdFDQPX3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+1 hour, 20 minutes
+
+*Dr. Donal O'Leary*, Reserach Scientist, Education and Outreach, NEON-Battelle, covers NEON LiDAR GEDI Fusion.
+
+### Assignments in this chapter
+
+- *NEON AOP Written Questions* Demonstrate your knowledge of NEON AOP's philosophy and practices, and identify how these intersect with your own research interests (6.14).
+
+- *NEON AOP Coding Lab* Access NEON AOP data using the `neonUtilities` package and use it generate LiDAR point clouds with the `lidR` package (6.15).
+
+- *NEON AOP Culmination Write Up* Summarize a project you might explore using Data from NEON AOP (6.16).
+
+## About Hyperspectral remote sensing
 
 ### Mapping the Invisible
 
@@ -216,10 +258,10 @@ library(rgdal)
 ## rgdal: version: 1.5-32, (SVN revision 1176)
 ## Geospatial Data Abstraction Library extensions to R successfully loaded
 ## Loaded GDAL runtime: GDAL 3.4.3, released 2022/04/22
-## Path to GDAL shared files: C:/Users/rohan/AppData/Local/R/win-library/4.2/rgdal/gdal
+## Path to GDAL shared files: C:/Program Files/R/R-4.2.1/library/rgdal/gdal
 ## GDAL binary built with GEOS: TRUE 
 ## Loaded PROJ runtime: Rel. 7.2.1, January 1st, 2021, [PJ_VERSION: 721]
-## Path to PROJ shared files: C:/Users/rohan/AppData/Local/R/win-library/4.2/rgdal/proj
+## Path to PROJ shared files: C:/Program Files/R/R-4.2.1/library/rgdal/proj
 ## PROJ CDN enabled: FALSE
 ## Linking to sp version:1.5-0
 ## To mute warnings of possible GDAL/OSR exportToProj4() degradation,
@@ -253,9 +295,7 @@ and visualization.
 
 More Information on raster metadata:
 
-* <a href="https://www.neonscience.org/raster-data-r" target="_blank"> Raster Data in R 
-- The Basics</a> - this tutorial explains more about how rasters work in R and 
-their associated metadata.
+* <a href="https://www.neonscience.org/raster-data-r" target="_blank"> Raster Data in R  - The Basics</a> - this tutorial explains more about how rasters work in R and their associated metadata.
 
 * <a href="https://www.neonscience.org/hyper-spec-intro" target="_blank"> About 
 Hyperspectral Remote Sensing Data</a> -this tutorial explains more about 
@@ -872,7 +912,7 @@ b9r
 		coordinate reference system that the data are in. Source: National Ecological
 		Observatory Network (NEON) 
 
-<a href="https://www.neonscience.org/raster-data-series" target="_blank"> Learn more about raster attributes including extent, and coordinate reference systems here.</a>
+<a href="https://www.neonscience.org/resources/learning-hub/tutorials/dc-raster-time-series-r"> Learn more about raster attributes including extent, and coordinate reference systems here.</a>
 
 We can adjust the colors of our raster too if we want.
 
@@ -1585,7 +1625,7 @@ Download Dataset</a>
 ### Getting Started
 In this section we will compare NEON and GEDI LiDAR data by comparing the information that they both capture in the same location. NEON data are actually one of the datasets used by the GEDI mission to calibrate and validate GEDI waveforms, so this makes for a valuable comparison! 
 
-In order to compare these data, we will need to download GEDI data that overlap a NEON site. Fortunately, Carlos Silva et al. have made a convenient R package clled `rGEDI` and <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">this excellent tutorial hosted on CRAN</a> desribing how to work with GEDI data in R. 
+In order to compare these data, we will need to download GEDI data that overlap a NEON site. Fortunately, Carlos Silva et al. have made a convenient R package clled `rGEDI` and <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">this excellent tutorial hosted on CRAN</a> desribing how to work with GEDI data in R. [tutorial not currently available]
 
 However, GEDI data are currently only available to download per complete orbit, which means that the vast majority of the orbit's data does not fall within a NEON site. The GEDI orbit datasets come in HDF5 data format, and contain about 7Gb of data, so you may want to run the first few sections of this tutorial to get the GEDI download started, and refresh your memory of HDF5 files with NEON's <a href="https://www.neonscience.org/intro-hdf5-r-series">Intro to HDF5 series</a>.
 
@@ -1594,39 +1634,16 @@ First, we will load the required libraries and set our working directory:
 
 ```r
 # devtools::install_git("https://github.com/carlos-alberto-silva/rGEDI", dependencies = TRUE)
-# library(rGEDI)
+library(rGEDI)
 library(raster)
 library(sp)
 library(sf)
-```
-
-```
-## Linking to GEOS 3.9.1, GDAL 3.4.3, PROJ 7.2.1; sf_use_s2() is TRUE
-```
-
-```r
 library(rgl)
 library(lidR)
 library(neonUtilities)
 library(viridis)
-```
-
-```
-## Loading required package: viridisLite
-```
-
-```r
 library(maptools)
-```
 
-```
-## Checking rgeos availability: TRUE
-## Please note that 'maptools' will be retired by the end of 2023,
-## plan transition at your earliest convenience;
-## some functionality will be moved to 'sp'.
-```
-
-```r
 #wd <- "./data" # This will depend on your local environment
 #setwd(wd)
 ```
@@ -1642,33 +1659,16 @@ SITECODE <- "WREF"
 byTileAOP(dpID = "DP3.30015.001", site = SITECODE, year = 2017, 
           easting = 580000, northing = 5075000, check.size = F,
           savepath = './data')
-```
 
-```
-## Downloading files totaling approximately 4.035953 MB 
-## Downloading 6 files
-##   |                                                                              |                                                                      |   0%  |                                                                              |==============                                                        |  20%  |                                                                              |============================                                          |  40%  |                                                                              |==========================================                            |  60%  |                                                                              |========================================================              |  80%  |                                                                              |======================================================================| 100%
-## Successfully downloaded  6  files.
-## NEON_D16_WREF_DP3_580000_5075000_CHM.tif downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/L3/DiscreteLidar/CanopyHeightModelGtif
-## NEON_D16_WREF_DP1_580000_5075000_classified_point_cloud.prj downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/Metadata/DiscreteLidar/TileBoundary/shps
-## NEON_D16_WREF_DP1_580000_5075000_classified_point_cloud.dbf downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/Metadata/DiscreteLidar/TileBoundary/shps
-## NEON_D16_WREF_DP1_580000_5075000_classified_point_cloud.shp downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/Metadata/DiscreteLidar/TileBoundary/shps
-## NEON_D16_WREF_DP1_580000_5075000_classified_point_cloud.kml downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/Metadata/DiscreteLidar/TileBoundary/kmls
-## NEON_D16_WREF_DP1_580000_5075000_classified_point_cloud.shx downloaded to ./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/Metadata/DiscreteLidar/TileBoundary/shps
-```
-
-```r
 chm <- raster('./data/DP3.30015.001/neon-aop-products/2017/FullSite/D16/2017_WREF_1/L3/DiscreteLidar/CanopyHeightModelGtif/NEON_D16_WREF_DP3_580000_5075000_CHM.tif')
 
 plot(chm)
 ```
 
-<img src="06-NEON_AOP_files/figure-html/download-chm-1.png" width="672" />
-
 As you can see, this particular CHM is showing a conspicuous, triangle-shaped clearcut in this section of the experimental forest, where the tree canopy is much shorter than the towering 60m+ trees in the undisturbed areas. This variation will give us a variety of forest structures to investigate.
 
 ### Downloading GEDI data
-This next section on downloading and working with GEDI data is loosely based on the excellent `rGEDI` package tutorial <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">posted on CRAN here</a>. If you would prefer to avoid a large download (>7Gb) of a full GEDI orbit, you can forego these steps and use the <a href="https://ndownloader.figshare.com/files/24978809">
+This next section on downloading and working with GEDI data is loosely based on the excellent `rGEDI` package tutorial <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">posted on CRAN here</a> [link broken]. If you would prefer to avoid a large download (>7Gb) of a full GEDI orbit, you can forego these steps and use the <a href="https://ndownloader.figshare.com/files/24978809">
 example GEDI dataset here</a>, and skip to the `readLevel1B()` function below.
 
 The Global Ecosystem Dynamics Investigation (GEDI) is a NASA mission with the primary data collection being performed by a novel waveform lidar instrument mounted on the International Space Station (ISS). Please see <a href="https://www.sciencedirect.com/science/article/pii/S2666017220300018">this open-access paper</a> published in Science of Remote Sensing that describes this mission in detail. The ISS orbits around the world every 90 minutes, and can be tracked <a href="https://spotthestation.nasa.gov/tracking_map.cfm">on this cool NASA website</a>. 
@@ -2032,20 +2032,7 @@ download.file(url="https://data.neonscience.org/api/v0/documents/All_NEON_TOS_Pl
               destfile="All_NEON_TOS_Plots_V8.zip", mode = 'wb')
 unzip("All_NEON_TOS_Plots_V8.zip")
 NEON_all_plots <- st_read('All_NEON_TOS_Plots_V8/All_NEON_TOS_Plot_Polygons_V8.shp')
-```
 
-```
-## Reading layer `All_NEON_TOS_Plot_Polygons_V8' from data source 
-##   `C:\Users\rohan\Environmental-Informatics-Using-Research-Infrastructures-and-their-Data\data\All_NEON_TOS_Plots_V8\All_NEON_TOS_Plot_Polygons_V8.shp' 
-##   using driver `ESRI Shapefile'
-## Simple feature collection with 3841 features and 36 fields
-## Geometry type: POLYGON
-## Dimension:     XY
-## Bounding box:  xmin: -156.6516 ymin: 17.9514 xmax: -66.82358 ymax: 71.3169
-## Geodetic CRS:  WGS 84
-```
-
-```r
 # Select just the WREF site
 SITECODE = 'WREF'
 base_plots_SPDF <- NEON_all_plots[
@@ -2054,19 +2041,10 @@ base_plots_SPDF <- NEON_all_plots[
 rm(NEON_all_plots)
 
 base_crop=st_crop(base_plots_SPDF, extent(chm_WGS))
-```
 
-```
-## Warning: attribute variables are assumed to be spatially constant throughout all
-## geometries
-```
-
-```r
 plot(chm_WGS)
 plot(base_crop$geometry, border = 'blue', add=T)
 ```
-
-<img src="06-NEON_AOP_files/figure-html/import and plot base plots-1.png" width="672" />
 
 
 ## NEON AOP Written Questions:
