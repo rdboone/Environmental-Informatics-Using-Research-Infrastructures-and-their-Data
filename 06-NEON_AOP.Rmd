@@ -1324,7 +1324,7 @@ First, we will load the required libraries and set our working directory:
 
 ```{r load-libraries, warning=FALSE}
 # devtools::install_git("https://github.com/carlos-alberto-silva/rGEDI", dependencies = TRUE)
-# library(rGEDI)
+library(rGEDI)
 library(raster)
 library(sp)
 library(sf)
