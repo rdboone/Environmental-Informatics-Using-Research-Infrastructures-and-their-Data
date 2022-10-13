@@ -12,6 +12,40 @@ After completing this tutorial, you will be able to:
   hyperspectral remote sensing data in tools like R or Python.
 * Describe what a "band" is.
 
+### Guest Lectures
+
+#### Introduction to NEON Airborne Observation Platform
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3zDshjf3Hu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour, 10 minutes
+
+*John Musinsky*, Researd Scientist, Remote Sensing, NEON-Battelle, introduces the NEON Airborne Observation Platform.
+
+#### NEON AOP: Introduction to LiDAR Data
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hNVhvP7rAnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour
+
+*Dr. Tristan Goulden*, Lead Research Scientist, Remote Sensing, NEON-Battelle, introduces LiDAR data.
+
+#### NEON AOP: Introcudtion to Hyperspectral Data
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jlOCH3H1PWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour, 5 minutes
+
+*Dr. Tristan Goulden*, Lead Research Scientist, Remote Sensing, NEON-Battelle, introduces hyperspectral data.
+
+#### NEON LiDAR GEDI Fusion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8HbdFDQPX3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+1 hour, 20 minutes
+
+*Dr. Donal O'Leary*, Reserach Scientist, Education and Outreach, NEON-Battelle, covers NEON LiDAR GEDI Fusion.
+
 ##About Hyperspectral remote sensing
 
 ### Mapping the Invisible
