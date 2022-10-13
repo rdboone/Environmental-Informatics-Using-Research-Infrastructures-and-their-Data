@@ -1639,7 +1639,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.3349941 secs
+## Stacking took 0.339397 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found
@@ -5583,8 +5583,151 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
 ```
 
 ```
-## Skipping install of 'NEONprocIS.base' from a github remote, the SHA1 (169ddfba) has not changed since last install.
-##   Use `force = TRUE` to force installation
+## Downloading GitHub repo NEONScience/NEON-IS-data-processing@master
+```
+
+```
+## cli   (3.3.0 -> 3.4.1) [CRAN]
+## vctrs (0.4.1 -> 0.4.2) [CRAN]
+## cpp11 (0.4.2 -> 0.4.3) [CRAN]
+## purrr (0.3.4 -> 0.3.5) [CRAN]
+```
+
+```
+## Installing 4 packages: cli, vctrs, cpp11, purrr
+```
+
+```
+## Installing packages into 'C:/Users/rohan/AppData/Local/R/win-library/4.2'
+## (as 'lib' is unspecified)
+```
+
+```
+## 
+##   There is a binary version available but the source version is later:
+##       binary source needs_compilation
+## cpp11  0.4.2  0.4.3             FALSE
+## 
+## package 'cli' successfully unpacked and MD5 sums checked
+```
+
+```
+## Warning: cannot remove prior installation of package 'cli'
+```
+
+```
+## Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying C:
+## \Users\rohan\AppData\Local\R\win-library\4.2\00LOCK\cli\libs\x64\cli.dll to C:
+## \Users\rohan\AppData\Local\R\win-library\4.2\cli\libs\x64\cli.dll: Permission
+## denied
+```
+
+```
+## Warning: restored 'cli'
+```
+
+```
+## package 'vctrs' successfully unpacked and MD5 sums checked
+```
+
+```
+## Warning: cannot remove prior installation of package 'vctrs'
+```
+
+```
+## Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying C:
+## \Users\rohan\AppData\Local\R\win-library\4.2\00LOCK\vctrs\libs\x64\vctrs.dll
+## to C:\Users\rohan\AppData\Local\R\win-library\4.2\vctrs\libs\x64\vctrs.dll:
+## Permission denied
+```
+
+```
+## Warning: restored 'vctrs'
+```
+
+```
+## package 'purrr' successfully unpacked and MD5 sums checked
+```
+
+```
+## Warning: cannot remove prior installation of package 'purrr'
+```
+
+```
+## Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying C:
+## \Users\rohan\AppData\Local\R\win-library\4.2\00LOCK\purrr\libs\x64\purrr.dll
+## to C:\Users\rohan\AppData\Local\R\win-library\4.2\purrr\libs\x64\purrr.dll:
+## Permission denied
+```
+
+```
+## Warning: restored 'purrr'
+```
+
+```
+## 
+## The downloaded binary packages are in
+## 	C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv\downloaded_packages
+```
+
+```
+## installing the source package 'cpp11'
+```
+
+```
+##          checking for file 'C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv\remotes9a864a742e4\NEONScience-NEON-IS-data-processing-5c794e2\pack\NEONprocIS.base/DESCRIPTION' ...  ✔  checking for file 'C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv\remotes9a864a742e4\NEONScience-NEON-IS-data-processing-5c794e2\pack\NEONprocIS.base/DESCRIPTION'
+##       ─  preparing 'NEONprocIS.base': (619ms)
+##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
+##       ─  checking for LF line-endings in source and make files and shell scripts
+##       ─  checking for empty or unneeded directories
+##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/calibration'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/data'
+##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/not_included'
+##    Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134'
+##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/data'
+##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/inner/calibration'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/inner'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135'
+##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in'
+##      Omitted 'LazyData' from DESCRIPTION
+##       ─  building 'NEONprocIS.base_0.0.42.tar.gz'
+##   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :     Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/2019/01/02/CFGLOC101580/location/prt_20208_locations.json'
+##   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :     Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/2019/01/02/CFGLOC101580/location/prt_20208_locations_alldates_null.json'
+##   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :     Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/2020/12/31/CFGLOC113261/location/CFGLOC113261.json'
+##   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :     Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/prt_calibrated_location_group/prt/2019/01/'
+##    Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/prt_calibrated_location_group/prt/2019/01/01/'
+##      Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/prt_calibrated_location_group/prt/2019/01/01/16247/'
+##    Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/def.loc.meta/test_input/pfs/prt_calibrated_location_group/prt/2019/01/01/16247/prt_16247_location.json'
+##   Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :     Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L,  :
+##      storing paths of more than 100 bytes is not portable:
+##      'NEONprocIS.base/tests/testthat/pfs/proc_group/prt/2019/01/01/27134/flags/prt_14491_2019-01-01_flagsCal.parquet'
+##      
+## 
+```
+
+```
+## Installing package into 'C:/Users/rohan/AppData/Local/R/win-library/4.2'
+## (as 'lib' is unspecified)
 ```
 
 ```r
@@ -5861,21 +6004,21 @@ Download and extract data
 ## Downloading files totaling approximately 83.333588 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 68.719186 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 69.960912 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp4G7ymj/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\Rtmp2VuiQv/filesToStack00200
 ```
 
 Add names to list for year/month combinations
@@ -6027,8 +6170,8 @@ memory
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1488060  79.5    3173575 169.5  3173575 169.5
-## Vcells 16213942 123.8   72281189 551.5 75226210 574.0
+## Ncells  1627095  86.9    3173280 169.5  3173280 169.5
+## Vcells 17269734 131.8   72281184 551.5 72554666 553.6
 ```
 
 Regularize timeseries to 30 minutes in case timestamps are missing from
@@ -6301,8 +6444,8 @@ Clean up environment
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1491008  79.7    3173575 169.5  3173575 169.5
-## Vcells 16289063 124.3   57824952 441.2 75226210 574.0
+## Ncells  1630039  87.1    3173280 169.5  3173280 169.5
+## Vcells 17344853 132.4   57824948 441.2 72554666 553.6
 ```
 
 

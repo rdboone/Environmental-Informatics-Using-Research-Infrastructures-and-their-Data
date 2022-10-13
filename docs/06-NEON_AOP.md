@@ -258,10 +258,10 @@ library(rgdal)
 ## rgdal: version: 1.5-32, (SVN revision 1176)
 ## Geospatial Data Abstraction Library extensions to R successfully loaded
 ## Loaded GDAL runtime: GDAL 3.4.3, released 2022/04/22
-## Path to GDAL shared files: C:/Program Files/R/R-4.2.1/library/rgdal/gdal
+## Path to GDAL shared files: C:/Users/rohan/AppData/Local/R/win-library/4.2/rgdal/gdal
 ## GDAL binary built with GEOS: TRUE 
 ## Loaded PROJ runtime: Rel. 7.2.1, January 1st, 2021, [PJ_VERSION: 721]
-## Path to PROJ shared files: C:/Program Files/R/R-4.2.1/library/rgdal/proj
+## Path to PROJ shared files: C:/Users/rohan/AppData/Local/R/win-library/4.2/rgdal/proj
 ## PROJ CDN enabled: FALSE
 ## Linking to sp version:1.5-0
 ## To mute warnings of possible GDAL/OSR exportToProj4() degradation,

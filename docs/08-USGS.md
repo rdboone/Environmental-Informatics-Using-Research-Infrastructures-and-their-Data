@@ -688,12 +688,12 @@ head(MauiCo_avgdailyQ)
 
 ```
 ##   agency_cd  site_no   dateTime X_00060_00003 X_00060_00003_cd tz_cd
-## 1      USGS 16400000 2022-10-11          15.1                P   UTC
-## 2      USGS 16401000 1929-08-31          18.0                A   UTC
-## 3      USGS 16402000 1957-07-31          51.0                A   UTC
-## 4      USGS 16403000 1957-06-30           5.5                A   UTC
-## 5      USGS 16403600 1970-09-30           2.4                A   UTC
-## 6      USGS 16403900 1996-09-30           1.3                A   UTC
+## 1      USGS 16400000 2022-10-12          9.67                P   UTC
+## 2      USGS 16401000 1929-08-31         18.00                A   UTC
+## 3      USGS 16402000 1957-07-31         51.00                A   UTC
+## 4      USGS 16403000 1957-06-30          5.50                A   UTC
+## 5      USGS 16403600 1970-09-30          2.40                A   UTC
+## 6      USGS 16403900 1996-09-30          1.30                A   UTC
 ```
 
 ```r
@@ -729,7 +729,7 @@ head(MauiHUC8_mindailyT)
 ## 3      USGS 16520000 2004-04-14          17.5                A   UTC
 ## 4      USGS 16527000 2004-01-13          15.4                A   UTC
 ## 5      USGS 16555000 2004-01-13          16.4                A   UTC
-## 6      USGS 16618000 2022-10-11          20.5                P   UTC
+## 6      USGS 16618000 2022-10-12          20.6                P   UTC
 ```
 
 ```r
@@ -2286,7 +2286,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-10-04 UTC" "2022-10-14 UTC"
+## [1] "2022-10-05 UTC" "2022-10-15 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2593,7 +2593,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=ab2aaf27-1755-4829-a69d-1564a1e12626OUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=65cc8acc-6e95-4a24-aae6-a62ec9ca4dcbOUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

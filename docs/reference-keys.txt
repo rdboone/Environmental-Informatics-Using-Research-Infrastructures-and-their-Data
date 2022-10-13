@@ -199,6 +199,13 @@ exercises-1
 computational
 neon-aop
 learning-objectives-2
+guest-lectures-2
+introduction-to-neon-airborne-observation-platform
+neon-aop-introduction-to-lidar-data
+neon-aop-introcudtion-to-hyperspectral-data
+neon-lidar-gedi-fusion
+assignments-in-this-chapter-2
+about-hyperspectral-remote-sensing
 mapping-the-invisible
 about-hyperspectral-remote-sensing-data
 key-metadata-for-hyperspectral-data
@@ -414,10 +421,3 @@ whats-better-for-code-conciseness-or-readability
 how-find-i-find-resources-to-navigate-the-neon-data-portal
 how-can-i-best-prepare-for-class-and-succeed
 fall-2020-ignite-session
-guest-lectures-2
-introduction-to-neon-airborne-observation-platform
-neon-aop-introduction-to-lidar-data
-neon-aop-introcudtion-to-hyperspectral-data
-neon-lidar-gedi-fusion
-assignments-in-this-chapter-2
-about-hyperspectral-remote-sensing
