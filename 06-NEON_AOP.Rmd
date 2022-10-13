@@ -48,13 +48,13 @@ After completing this tutorial, you will be able to:
 
 ### Assignments in this chapter
 
-- *NEON AOP Written Questions* Demonstrate your knowledge of NEON AOP's philosophy and practices, and identify how these intersect with your own research interests (6.13).
+- *NEON AOP Written Questions* Demonstrate your knowledge of NEON AOP's philosophy and practices, and identify how these intersect with your own research interests (6.14).
 
-- *NEON AOP Coding Lab* Access NEON AOP data using the `neonUtilities` package and use it generate LiDAR point clouds with the `lidR` package (6.14).
+- *NEON AOP Coding Lab* Access NEON AOP data using the `neonUtilities` package and use it generate LiDAR point clouds with the `lidR` package (6.15).
 
-- *NEON AOP Culmination Write Up* Summarize a project you might explore using Data from NEON AOP (6.15).
+- *NEON AOP Culmination Write Up* Summarize a project you might explore using Data from NEON AOP (6.16).
 
-##About Hyperspectral remote sensing
+## About Hyperspectral remote sensing
 
 ### Mapping the Invisible
 
@@ -268,9 +268,7 @@ and visualization.
 
 More Information on raster metadata:
 
-* <a href="https://www.neonscience.org/raster-data-r" target="_blank"> Raster Data in R 
-- The Basics</a> - this tutorial explains more about how rasters work in R and 
-their associated metadata.
+* <a href="https://www.neonscience.org/raster-data-r" target="_blank"> Raster Data in R  - The Basics</a> - this tutorial explains more about how rasters work in R and their associated metadata.
 
 * <a href="https://www.neonscience.org/hyper-spec-intro" target="_blank"> About 
 Hyperspectral Remote Sensing Data</a> -this tutorial explains more about 
@@ -677,7 +675,7 @@ b9r
 		coordinate reference system that the data are in. Source: National Ecological
 		Observatory Network (NEON) 
 
-<a href="https://www.neonscience.org/raster-data-series" target="_blank"> Learn more about raster attributes including extent, and coordinate reference systems here.</a>
+<a href="https://www.neonscience.org/resources/learning-hub/tutorials/dc-raster-time-series-r"> Learn more about raster attributes including extent, and coordinate reference systems here.</a>
 
 We can adjust the colors of our raster too if we want.
 
@@ -1358,7 +1356,7 @@ Download Dataset</a>
 ### Getting Started
 In this section we will compare NEON and GEDI LiDAR data by comparing the information that they both capture in the same location. NEON data are actually one of the datasets used by the GEDI mission to calibrate and validate GEDI waveforms, so this makes for a valuable comparison! 
 
-In order to compare these data, we will need to download GEDI data that overlap a NEON site. Fortunately, Carlos Silva et al. have made a convenient R package clled `rGEDI` and <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">this excellent tutorial hosted on CRAN</a> desribing how to work with GEDI data in R. 
+In order to compare these data, we will need to download GEDI data that overlap a NEON site. Fortunately, Carlos Silva et al. have made a convenient R package clled `rGEDI` and <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">this excellent tutorial hosted on CRAN</a> desribing how to work with GEDI data in R. [tutorial not currently available]
 
 However, GEDI data are currently only available to download per complete orbit, which means that the vast majority of the orbit's data does not fall within a NEON site. The GEDI orbit datasets come in HDF5 data format, and contain about 7Gb of data, so you may want to run the first few sections of this tutorial to get the GEDI download started, and refresh your memory of HDF5 files with NEON's <a href="https://www.neonscience.org/intro-hdf5-r-series">Intro to HDF5 series</a>.
 
@@ -1402,7 +1400,7 @@ plot(chm)
 As you can see, this particular CHM is showing a conspicuous, triangle-shaped clearcut in this section of the experimental forest, where the tree canopy is much shorter than the towering 60m+ trees in the undisturbed areas. This variation will give us a variety of forest structures to investigate.
 
 ### Downloading GEDI data
-This next section on downloading and working with GEDI data is loosely based on the excellent `rGEDI` package tutorial <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">posted on CRAN here</a>. If you would prefer to avoid a large download (>7Gb) of a full GEDI orbit, you can forego these steps and use the <a href="https://ndownloader.figshare.com/files/24978809">
+This next section on downloading and working with GEDI data is loosely based on the excellent `rGEDI` package tutorial <a href="https://cran.r-project.org/web/packages/rGEDI/vignettes/tutorial.html">posted on CRAN here</a> [link broken]. If you would prefer to avoid a large download (>7Gb) of a full GEDI orbit, you can forego these steps and use the <a href="https://ndownloader.figshare.com/files/24978809">
 example GEDI dataset here</a>, and skip to the `readLevel1B()` function below.
 
 The Global Ecosystem Dynamics Investigation (GEDI) is a NASA mission with the primary data collection being performed by a novel waveform lidar instrument mounted on the International Space Station (ISS). Please see <a href="https://www.sciencedirect.com/science/article/pii/S2666017220300018">this open-access paper</a> published in Science of Remote Sensing that describes this mission in detail. The ISS orbits around the world every 90 minutes, and can be tracked <a href="https://spotthestation.nasa.gov/tracking_map.cfm">on this cool NASA website</a>. 
