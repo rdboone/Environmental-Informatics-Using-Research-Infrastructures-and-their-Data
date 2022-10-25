@@ -383,10 +383,10 @@ wqpcounts_sc[['total-result-count']]
 ```
 
 ```
-## [1] 4018586
+## [1] 4018624
 ```
 
-This doesn't provide any information about the sites, just the total number. I know that with 4,018,586 results, I will want to add more criteria before trying to download. Let's continue to add query parameters before moving to `whatWQPsites`.
+This doesn't provide any information about the sites, just the total number. I know that with 4,018,624 results, I will want to add more criteria before trying to download. Let's continue to add query parameters before moving to `whatWQPsites`.
 
 
 ```r
@@ -405,10 +405,10 @@ wqpcounts_sc_stream[['total-result-count']]
 ```
 
 ```
-## [1] 2011036
+## [1] 2011074
 ```
 
-2,011,036 results are still a lot to download. Let's add more levels of criteria:
+2,011,074 results are still a lot to download. Let's add more levels of criteria:
 
 
 ```r
@@ -429,10 +429,10 @@ wqpcounts_sc_stream_temp[['total-result-count']]
 ```
 
 ```
-## [1] 148463
+## [1] 148464
 ```
 
-148,463 is little more manageble. We can also easily compare avilable stream temperature and lake temperature data.
+148,464 is little more manageble. We can also easily compare avilable stream temperature and lake temperature data.
 
 
 ```r
@@ -463,7 +463,7 @@ wqpcounts_sc_stream_temp[['total-result-count']]
 ```
 
 ```
-## [1] 148463
+## [1] 148464
 ```
 
 ```r
@@ -688,12 +688,12 @@ head(MauiCo_avgdailyQ)
 
 ```
 ##   agency_cd  site_no   dateTime X_00060_00003 X_00060_00003_cd tz_cd
-## 1      USGS 16400000 2022-10-12          9.67                P   UTC
-## 2      USGS 16401000 1929-08-31         18.00                A   UTC
-## 3      USGS 16402000 1957-07-31         51.00                A   UTC
-## 4      USGS 16403000 1957-06-30          5.50                A   UTC
-## 5      USGS 16403600 1970-09-30          2.40                A   UTC
-## 6      USGS 16403900 1996-09-30          1.30                A   UTC
+## 1      USGS 16400000 2022-10-24          15.5                P   UTC
+## 2      USGS 16401000 1929-08-31          18.0                A   UTC
+## 3      USGS 16402000 1957-07-31          51.0                A   UTC
+## 4      USGS 16403000 1957-06-30           5.5                A   UTC
+## 5      USGS 16403600 1970-09-30           2.4                A   UTC
+## 6      USGS 16403900 1996-09-30           1.3                A   UTC
 ```
 
 ```r
@@ -729,7 +729,7 @@ head(MauiHUC8_mindailyT)
 ## 3      USGS 16520000 2004-04-14          17.5                A   UTC
 ## 4      USGS 16527000 2004-01-13          15.4                A   UTC
 ## 5      USGS 16555000 2004-01-13          16.4                A   UTC
-## 6      USGS 16618000 2022-10-12          20.6                P   UTC
+## 6      USGS 16618000 2022-10-24          20.7                P   UTC
 ```
 
 ```r
@@ -795,7 +795,7 @@ length(unique(SaltLake_totalN$site_no))
 ```
 
 ```
-## [1] 12
+## [1] 11
 ```
 
 ### readNWISdv
@@ -2286,7 +2286,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-10-05 UTC" "2022-10-15 UTC"
+## [1] "2022-10-17 UTC" "2022-10-27 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2575,9 +2575,6 @@ evap_geojob <- geoknife(evap_stencil, evap_fabric, evap_knife)
 ```
 
 
-```
-## Process Accepted
-```
 
 ## Checking the geojob status
 
@@ -2593,7 +2590,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=65cc8acc-6e95-4a24-aae6-a62ec9ca4dcbOUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=3b2b3eed-22c4-4f31-b69e-45dcab71499bOUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

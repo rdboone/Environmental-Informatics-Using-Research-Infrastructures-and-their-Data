@@ -10,6 +10,32 @@
   * Interact with the AppEEARS API to query the list of available products
   * Submit and download submitting a point and area sample requests, download the request 
   * Filter data based on quality
+  
+### Guest Lectures
+
+#### NASA EOS Data and Information System: the Role of DAACs
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eqZURUcmqXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 45 minutes
+
+*Dr. Tom Maiersperger*, Project Scientist, LP DAAC
+
+#### Accesssing Data from the LP DAAC
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ruo_ybsqfws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 1 hour, 10 minutes
+
+*Aaron Friez*, Sicence Coordination Lead
+
+### Assignments in this chapter 
+
+- *NASA EOS Coding Assignment* Obtain an Earth Data account and write a short R script to prove that you have a working username and password (7.4)
+
+- *NASA EOS Coding Lab* Use your Earth Data account to pull and analyze data via the AppEARs API (7.45)
+
+- *NASA EOS Culmination Write Up* Summarize a project you might explore using data from NASA EOS (7.46)
 
 <img src="./images/CURRENT-Earth-Missions10_2019.png" width="400" />
 
@@ -35,7 +61,7 @@ The EOSDIS Earthdata Login provides a centralized and simplified mechanism for u
 
 Earthdata Login provides user registration and authentication services and a common set of user information to all EOSDIS data centers in a manner that permits the data center to integrate their additional requirements with the Earthdata Login services. Below is a brief description of services provided by the Earthdata Login.
 
-## **NASA EOS Coding Assignment 1**
+## **NASA EOS Coding Assignment**
 
 *Suggested completion: following lecture 1 on NASA EOS*
 
@@ -289,8 +315,8 @@ prettify(token_response)                                       # Print the prett
 ```
 ## {
 ##     "token_type": "Bearer",
-##     "token": "-UXsO38C8yKtS2dkEQr0dpbk397Oa-s8d2MtqzdYmHkzkLAg9hZ9Sx445pu8MqqnGcm_VYFpvHdEaEmJSlhE8g",
-##     "expiration": "2022-10-14T19:16:11Z"
+##     "token": "t_QKI01dsmP7tVo3FXTlK55zqiTTCddNMj6qINL7tDUUYwVSgeUOTb-9ahLEJEiSr3c19uU5qW6p1DsujfJCFg",
+##     "expiration": "2022-10-27T20:34:53Z"
 ## }
 ## 
 ```
@@ -327,7 +353,7 @@ sprintf("AppEEARS currently supports %i products." ,length(products))
 ```
 
 ```
-## [1] "AppEEARS currently supports 159 products."
+## [1] "AppEEARS currently supports 162 products."
 ```
 
 Next, look at the product's names and descriptions. Below, the 'ProductAndVersion' and 'Description' are printed for all products.
@@ -498,6 +524,9 @@ for (p in products){
 ## [1] "ECO1BMAPRAD.001 is Resampled Radiance from LP DAAC"
 ## [1] "ECO3ETALEXI.001 is Evapotranspiration dis-ALEXI from LP DAAC"
 ## [1] "ECO4ESIALEXI.001 is Evaporative Stress Index dis-ALEXI from LP DAAC"
+## [1] "ECO_L1B_GEO.002 is Geolocation from LP DAAC"
+## [1] "ECO_L2_CLOUD.002 is Cloud Mask Instantaneous from LP DAAC"
+## [1] "ECO_L2_LSTE.002 is Swath Land Surface Temperature and Emissivity Instantaneous from LP DAAC"
 ## [1] "HLSS30.020 is Land Surface Reflectance from LP DAAC"
 ## [1] "HLSL30.020 is Land Surface Reflectance from LP DAAC"
 ```
@@ -1621,8 +1650,8 @@ prettify(token_response)                                       # Print the prett
 ```
 ## {
 ##     "token_type": "Bearer",
-##     "token": "-UXsO38C8yKtS2dkEQr0dpbk397Oa-s8d2MtqzdYmHkzkLAg9hZ9Sx445pu8MqqnGcm_VYFpvHdEaEmJSlhE8g",
-##     "expiration": "2022-10-14T19:16:11Z"
+##     "token": "t_QKI01dsmP7tVo3FXTlK55zqiTTCddNMj6qINL7tDUUYwVSgeUOTb-9ahLEJEiSr3c19uU5qW6p1DsujfJCFg",
+##     "expiration": "2022-10-27T20:34:53Z"
 ## }
 ## 
 ```
@@ -2626,9 +2655,6 @@ This example can provide a template to use for your own research workflows. Leve
 
 
 **BONUS:** If you'd like to submit an area-based request instead you can do so using the shapefiles for each NEON site [in this folder](https://drive.google.com/drive/folders/19MJee-UKY-McbxDuYYCINhWRbqn4bbGO?usp=sharing)
-
-## NASA EOS Written Questions
-1) How does the scientific method of Earth Science differ from that of traditional/classical labratory sciences?
 
 ## NASA EOS Culmination Write Up
 

@@ -282,9 +282,13 @@ neon-aop-coding-lab
 neon-aop-culmination-write-up
 nasas-earth-observing-system-eos
 learning-objectives-6
+guest-lectures-3
+nasa-eos-data-and-information-system-the-role-of-daacs
+accesssing-data-from-the-lp-daac
+assignments-in-this-chapter-3
 nasa-eos-project-mission-design
 nasa-eos-earth-data-account
-nasa-eos-coding-assignment-1
+nasa-eos-coding-assignment
 distributed-active-archive-centers
 lp-daac
 the-lpdaac-mission-process-archive-distribute-apply
@@ -351,7 +355,6 @@ bonus-load-request-output-and-visualize
 load-a-geotiff
 plot-a-geotiff
 nasa-eos-coding-lab-2
-nasa-eos-written-questions
 nasa-eos-culmination-write-up
 usgs-national-water-information-system-nwis
 usgs-mission
