@@ -1639,7 +1639,7 @@ pr <- loadByProduct("DP1.00024.001", site="NIWO", avg=30,
 ## Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
 ## Copied the most recent publication of variable definition file to /stackedFiles
 ## Finished: Stacked 1 data tables and 3 metadata tables!
-## Stacking took 0.31885 secs
+## Stacking took 0.323302 secs
 ```
 
 `pr` is another named list, and again, metadata and units can be found
@@ -5587,15 +5587,18 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
 ```
 
 ```
-## jsonlite (1.8.2  -> 1.8.3 ) [CRAN]
-## cli      (3.3.0  -> 3.4.1 ) [CRAN]
-## vctrs    (0.4.1  -> 0.5.0 ) [CRAN]
-## purrr    (0.3.4  -> 0.3.5 ) [CRAN]
-## digest   (0.6.29 -> 0.6.30) [CRAN]
+## jsonlite (1.8.2   -> 1.8.3 ) [CRAN]
+## cli      (3.3.0   -> 3.4.1 ) [CRAN]
+## vctrs    (0.4.1   -> 0.5.0 ) [CRAN]
+## ps       (1.7.1   -> 1.7.2 ) [CRAN]
+## processx (3.7.0   -> 3.8.0 ) [CRAN]
+## purrr    (0.3.4   -> 0.3.5 ) [CRAN]
+## digest   (0.6.29  -> 0.6.30) [CRAN]
+## arrow    (9.0.0.2 -> 10.0.0) [CRAN]
 ```
 
 ```
-## Installing 5 packages: jsonlite, cli, vctrs, purrr, digest
+## Installing 8 packages: jsonlite, cli, vctrs, ps, processx, purrr, digest, arrow
 ```
 
 ```
@@ -5606,10 +5609,13 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
 ```
 ## 
 ##   There are binary versions available but the source versions are later:
-##          binary source needs_compilation
-## jsonlite  1.8.2  1.8.3              TRUE
-## vctrs     0.4.2  0.5.0              TRUE
-## digest   0.6.29 0.6.30              TRUE
+##           binary source needs_compilation
+## jsonlite   1.8.2  1.8.3              TRUE
+## vctrs      0.4.2  0.5.0              TRUE
+## ps         1.7.1  1.7.2              TRUE
+## processx   3.7.0  3.8.0              TRUE
+## digest    0.6.29 0.6.30              TRUE
+## arrow    9.0.0.2 10.0.0              TRUE
 ## 
 ## package 'cli' successfully unpacked and MD5 sums checked
 ```
@@ -5651,11 +5657,11 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
 ```
 ## 
 ## The downloaded binary packages are in
-## 	C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi\downloaded_packages
+## 	C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ\downloaded_packages
 ```
 
 ```
-## installing the source packages 'jsonlite', 'vctrs', 'digest'
+## installing the source packages 'jsonlite', 'vctrs', 'ps', 'processx', 'digest', 'arrow'
 ```
 
 ```
@@ -5667,27 +5673,35 @@ devtools::install_github(repo="NEONScience/NEON-IS-data-processing",
 ```
 
 ```
+## Warning in i.p(...): installation of package 'ps' had non-zero exit status
+```
+
+```
 ## Warning in i.p(...): installation of package 'digest' had non-zero exit status
 ```
 
 ```
-##          checking for file 'C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi\remotes84d06631780d\NEONScience-NEON-IS-data-processing-3ad3255\pack\NEONprocIS.base/DESCRIPTION' ...  ✔  checking for file 'C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi\remotes84d06631780d\NEONScience-NEON-IS-data-processing-3ad3255\pack\NEONprocIS.base/DESCRIPTION'
-##       ─  preparing 'NEONprocIS.base': (638ms)
+## Warning in i.p(...): installation of package 'processx' had non-zero exit status
+```
+
+```
+##          checking for file 'C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ\remotes82887dbd994\NEONScience-NEON-IS-data-processing-6065649\pack\NEONprocIS.base/DESCRIPTION' ...  ✔  checking for file 'C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ\remotes82887dbd994\NEONScience-NEON-IS-data-processing-6065649\pack\NEONprocIS.base/DESCRIPTION'
+##       ─  preparing 'NEONprocIS.base': (584ms)
 ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
 ##       ─  checking for LF line-endings in source and make files and shell scripts
 ##       ─  checking for empty or unneeded directories
 ##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/calibration'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/data'
-##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/not_included'
-##    Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01'
-##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01'
-##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01/not_included'
+##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01/01'
+## Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019/01'
+##    Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134/2019'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27134'
 ##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/data'
 ##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/inner/calibration'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer/inner'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135/outer'
-##   Removed empty directory      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135'
+##   Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135'     Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs/27135'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input/pfs'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in/test_input'
 ##      Removed empty directory 'NEONprocIS.base/tests/testthat/def.dir.in'
@@ -6000,21 +6014,21 @@ Download and extract data
 ## Downloading files totaling approximately 83.333588 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 68.719186 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ/filesToStack00200
 ## Finding available files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
 ## 
 ## Downloading files totaling approximately 69.960912 MB
 ## Downloading 1 files
 ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpQHUWVi/filesToStack00200
+## 1 files successfully downloaded to C:\Users\rohan\AppData\Local\Temp\RtmpU7OcsJ/filesToStack00200
 ```
 
 Add names to list for year/month combinations
@@ -6166,8 +6180,8 @@ memory
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1627902  87.0    3173280 169.5  3173280 169.5
-## Vcells 17272688 131.8   72281184 551.5 75225878 574.0
+## Ncells  1627935  87.0    3167402 169.2  3167402 169.2
+## Vcells 17273633 131.8   72284913 551.5 75225965 574.0
 ```
 
 Regularize timeseries to 30 minutes in case timestamps are missing from
@@ -6440,8 +6454,8 @@ Clean up environment
 
 ```
 ##            used  (Mb) gc trigger  (Mb) max used  (Mb)
-## Ncells  1630819  87.1    3173280 169.5  3173280 169.5
-## Vcells 17347762 132.4   57824948 441.2 75225878 574.0
+## Ncells  1630879  87.1    3167402 169.2  3167402 169.2
+## Vcells 17348752 132.4   57827931 441.2 75225965 574.0
 ```
 
 

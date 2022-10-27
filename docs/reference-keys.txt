@@ -357,6 +357,12 @@ plot-a-geotiff
 nasa-eos-coding-lab-2
 nasa-eos-culmination-write-up
 usgs-national-water-information-system-nwis
+learning-objectives-7
+guest-lectures-4
+usgs-water-resources-data-the-internet-of-water
+accessing-data-from-the-usgs-national-water-information-system
+usgs-national-water-information-system-using-the-geoknife-package
+assignments-in-this-chapter-4
 usgs-mission
 usgs-water-resources-mission
 types-of-usgs-nwis-data

@@ -4,6 +4,41 @@
 
 **United States Geological Survey's National Water Information System (NWIS)**
 
+## Learning Objectives
+
+ * Work in progress
+  
+### Guest Lectures
+
+#### USGS Water Resources Data: The Internet of Water
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O_FLAAWW1E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> XX minutes
+
+*Jim Kreft*, Product owner, USGS Water Resources Mission
+
+#### Accessing Data from the USGS National Water Information System
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SHrn_kvs-IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 50 minutes
+
+*Dr. Laura DeChico*, Data Manager and R Package Developer, U.S. Geological Survey's Data Science Branch of the Water Resources Mission Area
+
+#### USGS National Water Information System: Using the geoknife package
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4FcAI_EOD3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 55 minutes
+
+*Dr. Jordan Reed*, Chief, U.S. Geological Survey's Data Science Branch of the Water Resources Mission Area
+
+### Assignments in this chapter
+
+- *USGS Coding Lab* use the USGS `dataRetrieval` R package to analyze data from the 2020 monsoon in Arizona (8.16).
+
+- *USGS Culmination Write Up* Summarize a project you might explore using data from USGS (8.31).INF
 
 ## USGS Mission:
 
@@ -364,10 +399,10 @@ names(wqpcounts_sc)
 ## [17] "x-content-type-options"    "x-xss-protection"         
 ## [19] "strict-transport-security" "x-cache"                  
 ## [21] "via"                       "x-amz-cf-pop"             
-## [23] "x-amz-cf-id"
+## [23] "x-amz-cf-id"               "age"
 ```
 
-This returns a list with 23 different items, including total number of sites, breakdown of the number of sites by source (BioData, NWIS, STORET), total number of records, and breakdown of records count by source. Let's just look at total number of sites and total number of records.
+This returns a list with 24 different items, including total number of sites, breakdown of the number of sites by source (BioData, NWIS, STORET), total number of records, and breakdown of records count by source. Let's just look at total number of sites and total number of records.
 
 
 ```r
@@ -688,7 +723,7 @@ head(MauiCo_avgdailyQ)
 
 ```
 ##   agency_cd  site_no   dateTime X_00060_00003 X_00060_00003_cd tz_cd
-## 1      USGS 16400000 2022-10-24          15.5                P   UTC
+## 1      USGS 16400000 2022-10-26          90.7                P   UTC
 ## 2      USGS 16401000 1929-08-31          18.0                A   UTC
 ## 3      USGS 16402000 1957-07-31          51.0                A   UTC
 ## 4      USGS 16403000 1957-06-30           5.5                A   UTC
@@ -729,7 +764,7 @@ head(MauiHUC8_mindailyT)
 ## 3      USGS 16520000 2004-04-14          17.5                A   UTC
 ## 4      USGS 16527000 2004-01-13          15.4                A   UTC
 ## 5      USGS 16555000 2004-01-13          16.4                A   UTC
-## 6      USGS 16618000 2022-10-24          20.7                P   UTC
+## 6      USGS 16618000 2022-10-26          21.0                P   UTC
 ```
 
 ```r
@@ -2286,7 +2321,7 @@ query(DelBay_fabric, "times")
 ```
 
 ```
-## [1] "2022-10-17 UTC" "2022-10-27 UTC"
+## [1] "2022-10-19 UTC" "2022-10-29 UTC"
 ```
 
 The first example we've included here uses aggregated data, meaning there is a single URL for all the data of this type on the server. Some data that you encounter might be non-aggregated, meaning there are multiple URLs to access the same data. In these cases, you will need to create more than one geojob and join data at the end.
@@ -2590,7 +2625,7 @@ check(evap_geojob)
 ## [1] "Process successful"
 ## 
 ## $URL
-## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=3b2b3eed-22c4-4f31-b69e-45dcab71499bOUTPUT"
+## [1] "https://labs.waterdata.usgs.gov:443/gdp-process-wps/RetrieveResultServlet?id=c303c460-359b-44f0-a4d2-d3b51e33b45bOUTPUT"
 ## 
 ## $statusType
 ## [1] "ProcessSucceeded"

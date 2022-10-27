@@ -942,7 +942,7 @@ npn_get_point_data(
 ```
 
 ```
-## Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
+## Downloading: 980 B     Downloading: 980 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B     Downloading: 990 B
 ```
 
 ```
