@@ -53,3 +53,5 @@ NEON Field Sites Shapefile v17/
 *.laz
 /DP1.30001.01/
 data/
+
+.RdataTmp

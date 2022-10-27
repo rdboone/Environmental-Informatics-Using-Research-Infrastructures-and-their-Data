@@ -4,6 +4,41 @@
 
 **United States Geological Survey's National Water Information System (NWIS)**
 
+## Learning Objectives
+
+ * Work in progress
+  
+### Guest Lectures
+
+#### USGS Water Resources Data: The Internet of Water
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O_FLAAWW1E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> XX minutes
+
+*Jim Kreft*, Product owner, USGS Water Resources Mission
+
+#### Accessing Data from the USGS National Water Information System
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SHrn_kvs-IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 50 minutes
+
+*Dr. Laura DeChico*, Data Manager and R Package Developer, U.S. Geological Survey's Data Science Branch of the Water Resources Mission Area
+
+#### USGS National Water Information System: Using the geoknife package
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4FcAI_EOD3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> 55 minutes
+
+*Dr. Jordan Reed*, Chief, U.S. Geological Survey's Data Science Branch of the Water Resources Mission Area
+
+### Assignments in this chapter
+
+- *USGS Coding Lab* use the USGS `dataRetrieval` R package to analyze data from the 2020 monsoon in Arizona (8.16).
+
+- *USGS Culmination Write Up* Summarize a project you might explore using data from USGS (8.31).INF
 
 ## USGS Mission:
 
