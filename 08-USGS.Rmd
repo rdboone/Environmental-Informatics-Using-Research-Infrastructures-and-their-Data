@@ -14,7 +14,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O_FLAAWW1E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-> XX minutes
+> 55 minutes
 
 *Jim Kreft*, Product owner, USGS Water Resources Mission
 
@@ -22,7 +22,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SHrn_kvs-IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-> 50 minutes
+> 1 hour
 
 *Dr. Laura DeChico*, Data Manager and R Package Developer, U.S. Geological Survey's Data Science Branch of the Water Resources Mission Area
 

@@ -291,7 +291,9 @@ Next, assign the AppEEARS API URL to a static variable.
 ```{r}
 API_URL = "https://appeears.earthdatacloud.nasa.gov/api/"  # Set the AppEEARS API to a variable
 ```
+
 Use the `httr` package to post your username and password. A successful login will provide you with a token to be used later in this tutorial to submit a request. For more information or if you are experiencing difficulties, please see the [API Documentation](https://lpdaacsvc.cr.usgs.gov/appeears/api/?language=R#login).
+
 ```{r}
 # Insert API URL, call login service, set the component of HTTP header, and post the request to the server
 response <- httr::POST(paste0(API_URL,"login"), 

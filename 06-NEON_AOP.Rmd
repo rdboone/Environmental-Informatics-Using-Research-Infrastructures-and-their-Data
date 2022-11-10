@@ -1878,3 +1878,7 @@ Suggestions:
 2. An **overarching high-quality figure** to show how these data align
 
 3. One paragraph summarizing *how* this data or analysis is useful to **you and/or the infrastructure**.
+
+## Known Issues
+
+1. The `rGEDI` package does not install properly as of November 3, 2022.
